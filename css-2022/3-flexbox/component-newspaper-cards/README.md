@@ -14,9 +14,9 @@ A good place to start would be targeting the <img> within the article(s). Settin
 
 ### The next requirement is to size the images based on the Flexbox.
 
-Let’s change the <main> `display: flex` as it holds children we want to implement in a **Flexbox** layout. And just like that we have introduced 3 columns because the <main> container has x3 <article> elements that by default (row) are now side-by-side everything fits, and there is no overflow.
+Let’s change the `<main>` `display: flex` as it holds children we want to implement in a **Flexbox** layout. And just like that we have introduced 3 columns because the `<main>` container has x3 `<article>` elements that by default (row) are now side-by-side everything fits, and there is no overflow.
 
-A common problem with asymmetric image, is that the (content) is of different sizes. There isn’t enough space to fit them equally because each of these columns are big so it has to (shrink) them. Shrinking them according to their intrinsic sizes. Now if we want them to be equally sized, well that is where our new `flex` shorthand can assist. We can target all flex items being the <article> element(s) and then set `article { flex: 1 }`.
+A common problem with asymmetric image, is that the (content) is of different sizes. There isn’t enough space to fit them equally because each of these columns are big so it has to (shrink) them. Shrinking them according to their intrinsic sizes. Now if we want them to be equally sized, well that is where our new `flex` shorthand can assist. We can target all flex items being the `<article>` element(s) and then set `article { flex: 1 }`.
 
 > NOTE: why just setting flex-grow: 1 would not work is because you require those other properties provided by the flex shorthand that have default settings for growing, shrinking and basis.
 

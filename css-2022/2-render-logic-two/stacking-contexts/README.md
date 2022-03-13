@@ -33,9 +33,9 @@ The default value of the property is z-index: auto, which is equivalent to the n
 
 For additional information see https://web.dev/learn/css/z-index/.
 
-Example, if <main> has a z-axis increase by z-index: 1 that is lower than the comparable sibling <header> z-index: 2. That would then place that sibling more forward/ahead.
+Example, if `<main>` has a z-axis increase by z-index: 1 that is lower than the comparable sibling `<header>` z-index: 2. That would then place that sibling more forward/ahead.
 
-- Our child of <main> can do nothing to break above its staking context.
+- Our child of `<main>` can do nothing to break above its staking context.
 - Creating a staking context occurs only on position elements that are not static.
 - An element needs to have a z-index and is either a position of relative, absolute, sticky, or fixed.
 - Here we have created a staking context!
@@ -86,7 +86,6 @@ Example, if <main> has a z-axis increase by z-index: 1 that is lower than the co
     <p>Main content here...</p>
   </main>
 </body>
-
 ```
 
 ## Other ways in creating new contexts

@@ -9,7 +9,7 @@ The fundamental benefit to **Flexbox** wrapping is to avoid the situations when 
 2. The items get to a point where they don’t fit evenly.
 3. And overflow will occur producing a horizontal scrollbar.
 
-Introduce `flex-wrap: wrap` on the <main> container to avoid the above.
+Introduce `flex-wrap: wrap` on the `<main>` container to avoid the above.
 
 > As soon as we hit that point where the items don’t fit anymore, meaning we hit **minimum content size** and possible **overflow**, then the container pushes the last item onto a new line.
 
@@ -21,7 +21,7 @@ Dealing with what we covered earlier, flex: 1 standalone sets default settings f
 
 Our `flex-grow` value is setup using the shorthand declaration of `flex: 1`. That means we have a lot of extra free space when the single item wraps into its own row. That’s because the flex spacing calculation happens to work on a per row basis. In short it grows to large!
 
-If we don’t **constraint** them however, items will all grow as much as they can using available space. We manage this by defining a max-width: 250px in each flex item.
+If we don’t **constraint** them however, items will all grow as much as they can using available space. We manage this by defining a `max-width: 250px` in each flex item.
 
 ### Content vs items
 

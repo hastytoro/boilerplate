@@ -1,6 +1,6 @@
 ## Background Images
 
-CSS has evolved and <img> has grown more flexible, but there's one thing that it can't do -- **tile image**. When we repeating a pattern, use a `background-image`.
+CSS has evolved and `<img>` has grown more flexible, but there's one thing that it can't do -- **tile image**. When we repeating a pattern, use a `background-image`.
 
 By default `background-image` will be rendered at its native size and then tiled across the element.
 Warning: As discussed, monitors support "high DPI" and if we render an image at its natural size it'll appear blurry/fuzzy, since a single software px is stretched across multiple x3 hardware px(s).

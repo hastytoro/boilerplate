@@ -14,7 +14,7 @@ For example, we set the :root { --ratio: 0 } that would produce a flex container
 
 The second patten makes sense because `calc(var(--index) * var(--ratio)` is cycling through the color wheel much further for each flex item, producing colors that are not adjust to each other, unless we setup our --hue to 0.
 
-Additionally we can access each box <div> with a local/isolated `--index` variable value. We reactive calc() alongside the --ratio that will produce a different degree within the hsl() for each sibling flex item.
+Additionally we can access each box `<div>` with a local/isolated `--index` variable value. We reactive calc() alongside the --ratio that will produce a different degree within the hsl() for each sibling flex item.
 
 Jumping ahead, let’s add an animation to a property. By using a `@keyframe` we determine with the from keyword the initial transforming point, toward the end using the to keyword.
 

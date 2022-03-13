@@ -1,6 +1,6 @@
 ## Full Bleeding Layouts
 
-A common blog layout involves a single, centered column of text. Earlier in the Flow layout we learned about a placeholder max-width wrapper utility <div> that helps us with centering.
+A common blog layout involves a single, centered column of text. Earlier in the Flow layout we learned about a placeholder max-width wrapper utility `<div>` that helps us with centering.
 
 ```
 /* utility <div> with auto margin: */

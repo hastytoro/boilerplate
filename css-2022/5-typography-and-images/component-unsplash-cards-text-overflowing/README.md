@@ -9,7 +9,7 @@ The fundamental benefit to **Flexbox** wrapping is to avoid the situations when 
 2. The items get to a point where they don’t fit evenly.
 3. And overflow will occur producing a horizontal scrollbar.
 
-Introduce `flex-wrap: wrap` on the <main> container to avoid the above.
+Introduce `flex-wrap: wrap` on the `<main>` container to avoid the above.
 
 > As soon as we hit that point where the items don’t fit anymore, meaning we hit **minimum content size** and possible **overflow**, then the container pushes the last item onto a new line.
 

@@ -1,6 +1,6 @@
 ## Auto-Sizing Columns in CSS Grid: `auto-fill` vs `auto-fit`
 
-To summarize, the repeat() function allows you to repeat columns/rows as many times as needed. For example, if you’re creating a 12-column grid, you could write the following:
+To summarize, the `repeat()` function allows you to repeat columns/rows as many times as needed. For example, if you’re creating a 12-column grid, you could write the following:
 
 ```
 .grid {
