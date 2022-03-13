@@ -1,0 +1,107 @@
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'SF Text';
+  }
+  :root {
+    --hue: 0deg; /* color */
+    --intense: 100% 50%;
+    --ratio: 2; /* direction, try a large number like 200*/
+    --item-size: 75px;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  /* cosmetic styles */
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 640px;
+  }
+  /* Below we define for each box a local variable called --index, from number 1 to 16.
+  Use calc() adjusting the reactive --hue for each flex item according to its --index. */
+  .box {
+    width: calc(var(--item-size) * 2);
+    height: calc(var(--item-size) * 2);
+    background: hsl(calc(var(--index) * var(--ratio)) var(--intense));
+    border: 1px solid black;
+  }
+  /* Each box has its own unique variable called --index.
+  We can finally do this in CSS, instead of JS. */
+  .box:nth-of-type(1) {
+    --index: 1;
+  }
+  .box:nth-of-type(2) {
+    --index: 2;
+  }
+  .box:nth-of-type(3) {
+    --index: 3;
+  }
+  .box:nth-of-type(4) {
+    --index: 4;
+  }
+  .box:nth-of-type(5) {
+    --index: 5;
+  }
+  .box:nth-of-type(6) {
+    --index: 6;
+  }
+  .box:nth-of-type(7) {
+    --index: 7;
+  }
+  .box:nth-of-type(8) {
+    --index: 8;
+  }
+  .box:nth-of-type(9) {
+    --index: 9;
+  }
+  .box:nth-of-type(10) {
+    --index: 10;
+  }
+  .box:nth-of-type(11) {
+    --index: 11;
+  }
+  .box:nth-of-type(12) {
+    --index: 12;
+  }
+  .box:nth-of-type(13) {
+    --index: 13;
+  }
+  .box:nth-of-type(14) {
+    --index: 14;
+  }
+  .box:nth-of-type(15) {
+    --index: 15;
+  }
+  .box:nth-of-type(16) {
+    --index: 16;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+    <div class="box">11</div>
+    <div class="box">12</div>
+    <div class="box">13</div>
+    <div class="box">14</div>
+    <div class="box">15</div>
+    <div class="box">16</div>
+  </div>
+</body>

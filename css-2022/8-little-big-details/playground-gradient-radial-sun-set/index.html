@@ -1,0 +1,74 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    filter: drop-shadow(2px 4px 32px hsl(0deg 0% 0% / 0.4));
+  }
+  .box {
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    border: 2px solid black;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+  }
+  p {
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border-radius: 6px;
+  }
+
+  .radial {
+    background-image: radial-gradient(
+      white 0%,
+      yellow 10%,
+      gold 20%,
+      coral 30%,
+      skyblue /* remaining */
+    );
+  }
+
+  /*
+    We're saying that the "core" should span half of the available width and full height.
+    NOTE: Creating a gradient ellipse that can get really complicated really fast, and there is no need to go down the rabbit hole. Instead, let's focus on circular radial gradients.
+    We can "lock-in" the shape using the circle at prefix. We'll use it here to create a sunset effect:
+
+    Our circular gradient "core" is centered at 50%, 100%. That means the midpoint is along the bottom edge. The colors radiate outwards from this point using color-stop to define the shape.
+    Codepen user Marty has created a beautiful interactive sunset using linear and radial gradients.
+    Looking for more information in radial gradients MDN Web Docs has an in-depth article.
+    */
+  .sun-set {
+    background-image: radial-gradient(
+      circle at 50% 100%,
+      white 0%,
+      yellow 10%,
+      gold 20%,
+      coral 30%,
+      skyblue /* remaining */
+    );
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <div class="box radial"><p>circle</p></div>
+    <div class="box sun-set"><p>sun-set</p></div>
+  </section>
+</body>

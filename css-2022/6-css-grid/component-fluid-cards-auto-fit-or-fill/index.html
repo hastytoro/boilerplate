@@ -1,0 +1,50 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* grid configuration: */
+  /*
+    Resize the pane and notice that as available space increases/decreases, so does the columns in the window.
+    When available space isn't a perfect 150px for the card, we have leftover space. 
+    Additionally we could control how the columns are aligned with justify-content.
+    The main point, auto-fill allows us to implement fluid principles in grid layouts.
+  */
+  /*
+    Putting them together
+    We know that minmax() is like clamping a value to a specific range.
+    And we know that repeat() takes a special value and can auto-fill, which generates a dynamic number of cells.
+  */
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr)); /* will overflow */
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    gap: 16px;
+    background: slategrey;
+  }
+  .card {
+    height: 225px;
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+  }
+</style>
+
+<body>
+  <main class="wrapper">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+  </main>
+</body>

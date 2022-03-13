@@ -1,0 +1,55 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* flex configuration */
+  section {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; /* toggle to wrap flex items */
+  }
+
+  /* image settings */
+  /* We solve this by giving all <img> width/height and an object-fit: cover to avoid stretching. That’s handy, we tweak those properties to change the effective aspect ratio, for all images. */
+  /* However those settings mean we need to factor in a specific pixel size or percentage-based width. Or say the images are flex items that grow and shrink in a Flexbox container. */
+  /* img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  } */
+  /* That can be unpredictable so how can we rather scale images proportionally at a prescribed aspect ratio?
+  We can do that with the help of a brand-new property, aspect-ratio. */
+  img {
+    display: block;
+    flex: 1;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    min-width: 300px;
+  }
+  /* But we can improve this by using a placeholder. */
+</style>
+
+<body>
+  <section>
+    <img
+      alt="A wide-open outdoor concrete area. Architecture"
+      src="/architecture-hugo-sousa.jpg"
+    />
+    <img
+      alt="A modular building against a blue sky. Architecture"
+      src="/architecture-joel-filipe.jpg"
+    />
+    <img
+      alt="A unique building with inset curves. Architecture"
+      src="/architecture-julien-moreau.jpg"
+    />
+  </section>
+</body>

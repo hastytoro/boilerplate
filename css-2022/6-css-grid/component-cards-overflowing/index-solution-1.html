@@ -1,0 +1,77 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  h1 {
+    margin: 16px 0;
+  }
+  p {
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* main grid configuration: */
+  .grid {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    gap: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.4);
+  }
+  /* sub-flex configuration */
+  .img-list {
+    display: flex;
+    gap: 16px;
+  }
+  /* Solution 1: Moving overflow to grid child */
+  .placeholder {
+    overflow: auto;
+    max-width: 100%;
+  }
+  .box {
+    width: max-content;
+  }
+</style>
+
+<body>
+  <!-- main Grid layout -->
+  <div class="grid">
+    <div class="intro">
+      <h2>Heading</h2>
+      <p>Our holiday in Cortina d'Ampezzo:</p>
+    </div>
+
+    <div class="placeholder">
+      <div class="box">
+        <!-- sub-Flex layout -->
+        <ul class="img-list">
+          <li><img src="istockphoto1.jpg" /></li>
+          <li><img src="istockphoto2.jpg" /></li>
+          <li><img src="istockphoto3.jpg" /></li>
+          <li><img src="istockphoto4.jpg" /></li>
+          <li><img src="istockphoto5.jpg" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

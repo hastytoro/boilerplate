@@ -1,0 +1,35 @@
+<style>
+  .wrapper {
+    height: 200%;
+    margin-top: 164px;
+    display: flex;
+    justify-content: space-between;
+  }
+  html,
+  body {
+    height: 200%;
+  }
+  .sticky-ball {
+    position: sticky;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, deeppink, pink, gold);
+  }
+  .sticky-ball.one {
+    top: 25px;
+  }
+  .sticky-ball.two {
+    top: 0;
+  }
+  .sticky-ball.three {
+    top: -30px;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="sticky-ball one"></div>
+    <div class="sticky-ball two"></div>
+    <div class="sticky-ball three"></div>
+  </div>
+</body>

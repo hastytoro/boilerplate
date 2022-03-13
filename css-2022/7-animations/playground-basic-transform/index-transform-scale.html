@@ -1,0 +1,62 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+    /* centering content */
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  .origin {
+    position: absolute;
+    background: white;
+    border: 4px dashed gray;
+  }
+
+  /* animations */
+  /*
+    scale()
+    This function allows us to grow or shrink an element.
+    It uses unitless values representing multiples like line-height. scale(2) means that the element should be x2 as big as it would normally be.
+    We can also pass multiple values to scale the x and y-axis independently.
+
+    At first glance this might seem equivalent to setting width and height.
+    However what happens when our element has some text in it. The text scales up and down with the element.
+    We aren't just transforming the size and shape of the box, we're transforming the entire element and all of its descendants.
+
+    An important truth about transforms, elements are flattened into a texture.
+    All transforms essentially treat an element like a flat image warping and contorting it as you might in Photoshop.
+    That’s why they so important for animations! Think about how much work is required when we change something like width.
+  */
+  .animate {
+    transform: scale(150%);
+    transform: scale(1.5); /* same as above */
+    background: #695cff;
+    opacity: 0.8;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="placeholder">
+      <div class="box origin"></div>
+      <div class="box animate"></div>
+    </div>
+  </div>
+</body>

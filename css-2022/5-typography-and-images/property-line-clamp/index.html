@@ -1,0 +1,87 @@
+<html lang="en">
+  <style>
+    /* css reset */
+    * {
+      box-sizing: border-box;
+      font-family: 'Wotfard';
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+    html,
+    body {
+      height: 100%;
+    }
+    /* cosmetic styles */
+    .wrapper {
+      background: #d3d3d3;
+      border: 2px solid;
+      padding: 16px;
+      margin: 4px;
+      border-radius: 4px;
+    }
+
+    /* Text overflowing */
+    /* We need overflow: hidden to hide the lines that will be clamped off. */
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+
+    /* Can we do this from Flexbox?
+    Yes but the child needs to be in-Flow. */
+    .flex-container {
+      background: #d3d3d3;
+      border: 2px solid;
+      padding: 16px;
+      margin: 4px;
+      border-radius: 4px;
+      display: flex;
+    }
+    .clamped {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+  </style>
+
+  <body>
+    <section class="wrapper">
+      <h4>Flow layout is required/supported ✅</h4>
+      <p>
+        No matter how long this paragraph is, only 3 lines will be shown, the
+        rest concealed, and an ellipsis character will be added to demonstrate
+        that there is more text that is not shown here.
+      </p>
+      <p>Short paragraphs don't get an ellipsis.</p>
+    </section>
+
+    <section class="flex-container">
+      <h4>Flex items (children not-supported) ❌</h4>
+      <p class="clamped">
+        Warning: In certain cases the -webkit line-clamp can appear buggy. This
+        can happen when the element we're applying these styles to is also used
+        as a child flex item in the Flexbox Layout capacity.
+      </p>
+      <p class="clamped">
+        Here we avoid the issue as we line clamp our flex item but it isn't
+        being stretched or flexed as part of a Flexbox or Grid Layout because we
+        use an enclosing wrapper.
+      </p>
+    </section>
+
+    <section class="flex-container">
+      <div class="back-into-flow-placeholder">
+        <h4>Flexbox child is a single Flow layout container ✅</h4>
+        <p class="clamped">
+          Direct children that are flex item(s) inside a Flexbox parent will be
+          stretched according to the layout algorithm. We need our clamped
+          paragraphs to use Flow layout so we wrap our paragraph in a div.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .help-circle {
+    display: grid;
+    place-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: slateblue;
+    color: white;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0px 2px 8px hsl(0deg 0% 0% / 0.1),
+      0px 4px 16px hsl(0deg 0% 0% / 0.1), 0px 8px 32px hsl(0deg 0% 0% / 0.1);
+    cursor: pointer;
+  }
+  /* positioning: */
+  .help-circle {
+    --spacing: 32px;
+    position: fixed;
+    bottom: var(--spacing);
+    right: var(--spacing);
+  }
+  /*
+    First lets position: fixed our svg helper <button> at the bottom right edges of the window.
+    We animate from a completely off-screen location to its fixed location indicated by the 0%.
+    Using the calc() function we factor in 100% of its own height plus 32px of that floating distance from the bottom edge.
+    That ensures the animation starts at actually outside the viewport.
+
+    NOTE: using a CSS variable in keyframes is helpful because any variable defined (in a keyframe animation) is inherited from the place that the animation is used.
+  */
+  @keyframes slide-in {
+    from {
+      transform: translateY(calc(100% + var(--spacing)));
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  .help-circle {
+    animation: slide-in 1s;
+    animation-delay: 1s;
+  }
+</style>
+
+<body>
+  <button class="help-circle">
+    <img alt="" src="/help-white.svg" />
+  </button>
+</body>

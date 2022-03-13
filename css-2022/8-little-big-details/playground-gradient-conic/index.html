@@ -1,0 +1,115 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    filter: drop-shadow(2px 4px 32px hsl(0deg 0% 0% / 0.4));
+  }
+  .box {
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    border: 2px solid black;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+  }
+  p {
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border-radius: 6px;
+  }
+
+  .conic {
+    background-image: conic-gradient(deeppink, coral, gold, coral, white);
+  }
+
+  /*
+    We're saying that the "core" should span half of the available width and full height.
+    NOTE: Creating a gradient ellipse that can get really complicated really fast, and there is no need to go down the rabbit hole. Instead, let's focus on circular radial gradients.
+    We can "lock-in" the shape using the circle at prefix. We'll use it here to create a sunset effect:
+
+    Our circular gradient "core" is centered at 50%, 100%. That means the midpoint is along the bottom edge. The colors radiate outwards from this point using color-stop to define the shape.
+    Codepen user Marty has created a beautiful interactive sunset using linear and radial gradients.
+    Looking for more information in radial gradients MDN Web Docs has an in-depth article.
+  */
+  .conic-blend {
+    background-image: conic-gradient(
+      deeppink,
+      coral,
+      gold,
+      coral,
+      white,
+      deeppink /* <-- blend ending with starting color! */
+    );
+  }
+  .custom {
+    border-radius: 50%;
+    background-image: conic-gradient(
+      deeppink 0%,
+      deeppink 33.3%,
+      gold 33.4%,
+      gold 66.6%,
+      coral 66.7%,
+      coral 100%
+    );
+  }
+  /*
+    The most useful use cases for conic gradients is to create a glow effect.
+    Here we push the gradient down so that we only see the top half (50%).
+    Then we control colors from that 50% onwards to 100%.
+  */
+  .center-glow {
+    background-image: conic-gradient(
+      from 90deg at 50% 100%,
+      hsl(220deg 80% 55%) 50%,
+      hsl(220deg 90% 75%) 62.5%,
+      hsl(220deg 100% 85%) 75%,
+      hsl(220deg 80% 75%) 87.5%,
+      hsl(220deg 80% 55%) 100%
+    );
+  }
+  .metal-knob {
+    border-radius: 50%;
+    border: 2px solid hsl(0deg 0% 80%);
+    background-image: conic-gradient(
+      hsl(0deg 0% 90%),
+      hsl(0deg 0% 100%),
+      hsl(0deg 0% 30%),
+      hsl(0deg 0% 80%),
+      hsl(0deg 0% 50%),
+      hsl(0deg 0% 90%),
+      hsl(0deg 0% 100%),
+      hsl(0deg 0% 30%),
+      hsl(0deg 0% 80%),
+      hsl(0deg 0% 50%),
+      hsl(0deg 0% 90%)
+    );
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <div class="box conic"><p>normal-conic</p></div>
+    <div class="box conic-blend"><p>conic-blend</p></div>
+    <div class="box custom"><p>custom</p></div>
+    <div class="box center-glow"><p>center-glow</p></div>
+    <div class="box metal-knob"><p>metal-knob</p></div>
+  </section>
+</body>

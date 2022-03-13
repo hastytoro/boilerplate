@@ -1,0 +1,56 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    border: 4px solid;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  /* animations */
+  .one {
+    background: deeppink;
+    position: relative;
+    left: 50%;
+  }
+  /*
+    Translation allows us to move an item around.
+    We use translate() to shift an item along an x-axis we moving it side to side or y-axis being up and down.
+    •	Positive values move elements down and right.
+    •	And negative up and left.
+    •	Critically an element(s) in-flow position doesn't change.
+    •	Flow to Flexbox to Grid layouts are not no effected.
+
+    When we transform the middle child, your Flexbox algorithm doesn't notice it, and keeps other children in the same place.
+    This is like moving elements with edge properties in Position layout.
+
+    Important: There's one thing that makes translate() powerful and unique.
+    % percentage values refers to the element's own size. Not the available space in the parent container.
+    Setting translateX(-50%) moves the box right by its exact width, to the pixel.
+  */
+  .two {
+    background: blue;
+    transform: translateX(50%);
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="box one"></div>
+    <div class="box two"></div>
+  </div>
+</body>

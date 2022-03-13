@@ -1,0 +1,36 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+    /* background: black; */
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+    min-height: 100%;
+    border: 2px solid rgba(0, 0, 255, 0.5);
+  }
+  .box {
+    background-color: lightblue;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="box"></div>
+  </div>
+</body>

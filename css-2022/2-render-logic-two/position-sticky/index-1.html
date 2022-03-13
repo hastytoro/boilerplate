@@ -1,0 +1,30 @@
+<style>
+  /* Artificially boost the size of the <body>, so that the frame can scrolled. */
+  * {
+    font-family: 'Wotfard';
+  }
+
+  html,
+  body {
+    height: 150%;
+    padding: 48px;
+  }
+  .wrapper {
+    height: 50%;
+    border: 3px solid;
+  }
+  .sticky-ball {
+    position: sticky;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: deeppink;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="sticky-ball"></div>
+    <p>Scroll within this white box!</p>
+  </div>
+</body>

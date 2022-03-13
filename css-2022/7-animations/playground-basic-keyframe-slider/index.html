@@ -1,0 +1,62 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'SF Mono';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .box {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    margin: 4px;
+    /* centering content*/
+    display: grid;
+    place-content: center;
+    color: white;
+    text-align: center;
+  }
+
+  /* animations */
+  @keyframes slider {
+    from {
+      transform: rotateX(-30deg) translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: rotateX(0) translateX(0%);
+      opacity: 1;
+    }
+  }
+  .slider {
+    animation: slider 2s;
+    background: slategray;
+    border: 2px solid rgb(96, 109, 122);
+  }
+
+  /* animations */
+  @keyframes drop-in {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  .drop-in {
+    animation: drop-in 2s;
+    background: slateblue;
+    border: 2px solid rgb(94, 81, 179);
+  }
+</style>
+
+<body>
+  <div class="box slider">Slider</div>
+  <div class="box drop-in">Drop-in</div>
+</body>

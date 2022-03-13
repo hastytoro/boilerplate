@@ -1,0 +1,41 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* general styling */
+  strong {
+    margin-right: 8px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  input {
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid black;
+    color: deeppink;
+  }
+</style>
+
+<body>
+  <form class="wrapper">
+    <label for="email">
+      <div>
+        <strong>Email:</strong>
+      </div>
+    </label>
+    <input type="email" id="email" value="test@hello.com" />
+  </form>
+</body>

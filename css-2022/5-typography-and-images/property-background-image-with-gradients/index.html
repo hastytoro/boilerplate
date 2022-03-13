@@ -1,0 +1,119 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 6px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .box {
+    position: relative;
+    height: 200px;
+    background-color: #e5e5f7;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    border: #444cf7 solid 2px;
+  }
+  h3 {
+    position: absolute;
+    padding: 10px 15px;
+    border-radius: 4px;
+    top: -10px;
+    left: -10px;
+    background: #444cf7;
+    color: #e5e5f7;
+  }
+  p,
+  strong {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* background configuration */
+  /* The background-image property also accepts gradients. */
+  .zigzag {
+    background: linear-gradient(135deg, #444cf755 25%, transparent 25%) -10px 0/
+        20px 20px,
+      linear-gradient(225deg, #444cf7 25%, transparent 25%) -10px 0/ 20px 20px,
+      linear-gradient(315deg, #444cf755 25%, transparent 25%) 0px 0/ 20px 20px,
+      linear-gradient(45deg, #444cf7 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+  }
+  .square {
+    background-color: #e5e5f7;
+    background-image: linear-gradient(#444cf7 1px, transparent 1px),
+      linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
+    background-size: 20px 20px;
+  }
+  .complex {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(
+        30deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        150deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        30deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        150deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        60deg,
+        #444cf777 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #444cf777 75%,
+        #444cf777
+      ),
+      linear-gradient(
+        60deg,
+        #444cf777 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #444cf777 75%,
+        #444cf777
+      );
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+  }
+</style>
+
+<body>
+  <div class="box zigzag">
+    <h3>ZigZag</h3>
+  </div>
+  <div class="box square">
+    <h3>Square</h3>
+  </div>
+  <div class="box complex">
+    <h3>Complex</h3>
+  </div>
+  <p>You can generate gradients via: <strong>MagicPattern.design</strong>.</p>
+</body>

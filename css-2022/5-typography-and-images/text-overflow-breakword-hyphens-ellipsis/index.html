@@ -1,0 +1,93 @@
+<html lang="en">
+  <!-- attribute required for hyphen: auto -->
+  <style>
+   /* css reset */
+   * {
+      box-sizing: border-box;
+      font-family: 'Wotfard';
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      height: 100%;
+    }
+    
+    /* cosmetic styles */
+    .wrapper {
+      background: #d3d3d3;
+      border: 2px solid;
+      padding: 16px;
+      margin: 4px;
+      border-radius: 4px;
+    }
+    span {
+      color: deeppink;
+    }
+
+    /* text overflowing */
+    /* Option 1: */
+    .option1 {
+      overflow-wrap: break-word;
+    }
+    /* Option 2: */
+    .option2 {
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    /* Option 3: */
+    .option3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+  </style>
+
+  <body>
+    <div class="wrapper">
+      <p>
+        <h4>normal</h4>
+        This is a narrow column of text, with a very long word:
+        <span>antidisestablishmentarianism</span>.
+      </p>
+      <p>
+        The same problem happens with URLs:
+        <span>https://www.somewebsite.com/articles/a1b2c3</span>
+      </p>
+    </div>
+    <div class="wrapper">
+      <p class="option1">
+        <h4>overflow-wrap: break-word</h4>
+        This is a narrow column of text, with a very long word:
+        <span>antidisestablishmentarianism</span>.
+      </p>
+      <p class="option1">
+        The same problem happens with URLs:
+        <span>https://www.somewebsite.com/articles/a1b2c3</span>
+      </p>
+    </div>
+    <div class="wrapper">
+      <h4>hyphens: auto</h4>
+      <p class="option2">
+        This is a narrow column of text, with a very long word:
+        <span>antidisestablishmentarianism</span>.
+      </p>
+      <p class="option2">
+        The same problem happens with URLs:
+        <span>https://www.somewebsite.com/articles/a1b2c3</span>
+      </p>
+    </div>
+    <div class="wrapper">
+      <h4>text-overflow: ellipsis</h4>
+      <p class="option3">
+        This is a narrow column of text, with a very long word:
+        <span>antidisestablishmentarianism</span>.
+      </p>
+      <p class="option3">
+        The same problem happens with URLs:
+        <span>https://www.somewebsite.com/articles/a1b2c3</span>
+      </p>
+    </div>
+  </body>
+</html>

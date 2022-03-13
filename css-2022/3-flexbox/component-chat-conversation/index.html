@@ -1,0 +1,55 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* general styling */
+  .msg {
+    border-radius: 6px;
+    width: fit-content;
+    padding: 16px;
+  }
+  .msg.received {
+    background: hsl(0deg 0% 85%);
+    color: black;
+  }
+  .msg.sent {
+    background: hsl(220deg 100% 50%);
+    color: white;
+  }
+
+  .wrapper {
+    max-width: 500px;
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 18px;
+  }
+
+  .msg.sent {
+    align-self: flex-end;
+  }
+</style>
+
+<body>
+  <ol class="wrapper">
+    <li class="msg sent">Can you get me a big salad?</li>
+    <li class="msg received">What salad? I'm going to have coffee.</li>
+    <li class="msg sent">They have big salads.</li>
+    <li class="msg received">I've never seen a big salad.</li>
+    <li class="msg sent">They have a big salad.</li>
+    <li class="msg received">No!</li>
+    <li class="msg received">I need coffee first ☕.</li>
+  </ol>
+</body>

@@ -1,0 +1,69 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 32px;
+    background: hsl(220deg 100% 80%);
+    height: 100%;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 8px;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+
+  .black {
+    --shadow-color: hsl(0deg 0% 0% / 0.25);
+  }
+  .darker {
+    --shadow-color: hsl(220deg 100% 55%);
+  }
+  .box {
+    filter: drop-shadow(1px 2px 8px var(--shadow-color));
+  }
+  /*
+    So far our shadows have been semi-transparent black hsl(0deg 0% 0% / 0.4) -- that is not ideal.
+    When we layer black over our background, it doesn't just make it darker, it also desaturates it.    
+    The box on the left uses a transparent black and the right matches the hue() deg, saturation but lowers lightness. We wind up with a much more vibrant box!
+
+    But neither of these shadows are quite right :(.
+    The one on the left is too desaturated, but the one on the right is not desaturated enough, it feels more like a glow than a shadow!
+    So it can take time finding the right one.
+
+    By matching the hue() and lowering the saturation or lightness,
+    We can create an authentic shadow that doesn't have that 'washed out' grey quality and is well perfect!
+  */
+  .perfect {
+    --shadow-color: hsl(220deg 60% 55%);
+  }
+  .box {
+    filter: drop-shadow(1px 2px 8px var(--shadow-color));
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <div class="box black">Too grey</div>
+    <div class="box darker">Too bright</div>
+    <div class="box perfect">Just right</div>
+  </section>
+</body>

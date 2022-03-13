@@ -1,0 +1,85 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 6px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* general styling: */
+  .item,
+  .box {
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+  /*
+    Our grid will implicitly create as many rows as it needs.
+    How tall will these rows be?
+    Well by default they grow and shrink as-needed, based on their children content.
+  */
+  .box:nth-child(1) {
+    background-color: rgba(255, 192, 203, 0.5);
+    border: 2px solid pink;
+    height: 50px;
+  }
+  .box:nth-child(2) {
+    background: rgba(255, 218, 185, 0.5);
+    border: 2px solid pink;
+    height: 30px;
+  }
+  .box:nth-child(3) {
+    background: rgba(230, 230, 250, 0.5);
+    border: 2px solid lavender;
+    height: 40px;
+  }
+  .box:nth-child(4) {
+    background: rgba(32, 178, 171, 0.5);
+    border: 2px solid lightseagreen;
+    height: 80px;
+  }
+</style>
+
+<body>
+  <h1>Implicit</h1>
+  <div class="wrapper">
+    <div class="item">1️⃣</div>
+    <div class="item">2️⃣</div>
+    <div class="item">3️⃣</div>
+    <div class="item">4️⃣</div>
+    <div class="item">5️⃣</div>
+    <div class="item">6️⃣</div>
+    <div class="item">7️⃣</div>
+    <div class="item">8️⃣</div>
+    <div class="item">9️⃣</div>
+    <div class="item">🔟</div>
+  </div>
+  <h5>How tall will these rows be?</h5>
+  <div class="wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+  <p>
+    Your<strong>implicit</strong>rows are handy when we're rendering based on
+    some data, like a search results page. We can toss a bunch of items into our
+    grid and trust that each row will be the right size based on content.
+  </p>
+</body>

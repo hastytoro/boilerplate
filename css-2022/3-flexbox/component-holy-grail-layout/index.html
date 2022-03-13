@@ -1,0 +1,68 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic styles */
+  header.box {
+    border-color: hsl(45deg 100% 50%);
+    background-color: hsl(45deg 100% 50% / 0.2);
+  }
+  nav.box {
+    border-color: hsl(170deg 100% 35%);
+    background-color: hsl(170deg 100% 35% / 0.2);
+  }
+  main.box {
+    border-color: hsl(220deg 100% 50%);
+    background-color: hsl(220deg 100% 50% / 0.2);
+  }
+  aside.box {
+    border-color: hsl(300deg 100% 45%);
+    background-color: hsl(300deg 100% 45% / 0.2);
+  }
+  footer.box {
+    border-color: hsl(350deg 100% 60%);
+    background-color: hsl(350deg 100% 60% / 0.2);
+  }
+  .box {
+    border: 3px solid;
+    padding: 16px;
+  }
+  /* main Flexbox styling */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .middle {
+    flex: 1;
+    /* sub-Flexbox styling */
+    display: flex;
+    flex-direction: row;
+  }
+  main {
+    flex: 3;
+  }
+  nav,
+  aside {
+    flex: 1;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <header class="box">Header</header>
+    <section class="middle">
+      <nav class="box">Nav</nav>
+      <main class="box">Main</main>
+      <aside class="box">Advert</aside>
+    </section>
+    <footer class="box">Footer</footer>
+  </div>
+</body>

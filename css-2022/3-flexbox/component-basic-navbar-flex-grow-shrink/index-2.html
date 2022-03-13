@@ -1,0 +1,55 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav,
+  main {
+    padding: 16px;
+    border: 2px solid;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  /* As seen before by setting flex: 1 and setting flex: 2 that together produces (1 + 2) 3 units that Flexbox can use to divide up for distribution. Above ensures our <nav> flex: 1 gets the one (x1 / 3rd) of the total space. The <main> with the two sections (x2 / 3rd) of total space. */
+  nav {
+    flex-grow: 1;
+    max-width: 150px;
+    border-color: hsl(330deg 100% 50%);
+    background: hsl(330deg 100% 50% / 0.2);
+  }
+
+  main {
+    flex-grow: 2;
+    max-width: 500px;
+    border-color: hsl(45deg 100% 50%);
+    background: hsl(45deg 100% 50% / 0.2);
+  }
+  /* Lastly we can add constraints! Since we are participating in the default (row) we can ensure the max-width is needed by each item within our Flexbox container. */
+</style>
+
+<body>
+  <section class="wrapper">
+    <nav>
+      <p><strong>Logo</strong></p>
+    </nav>
+    <main><p>content...</p></main>
+  </section>
+</body>

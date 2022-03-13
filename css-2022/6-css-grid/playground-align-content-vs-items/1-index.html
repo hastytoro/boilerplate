@@ -1,0 +1,54 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .box {
+    /* centering content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    background: black;
+    color: white;
+    padding: 8px;
+    margin: 12px 0px;
+  }
+  .wrapper > * {
+    border: 2px solid;
+    padding: 16px;
+  }
+
+  /* grid configuration */
+  /*
+    Using align-content is how we align the rows in our grid:
+    NOTE: that this only works because we've given our grid a fixed height.
+  */
+  .wrapper {
+    display: grid;
+    align-content: space-between;
+    height: 100%; /* 100% of the grid */ /* test with measurements like 300px */
+  }
+  /*
+    Without that declaration align-content has no effect: the rows will be packed in like sardines!
+    We need free space in the grid otherwise there really isn't any difference between the options.
+  */
+</style>
+<body>
+  <div class="wrapper">
+    <div class="box">Hello</div>
+    <div class="box">Bonjour</div>
+    <div class="box">Zdravstvuyte</div>
+    <div class="box">こんにちは</div>
+  </div>
+</body>

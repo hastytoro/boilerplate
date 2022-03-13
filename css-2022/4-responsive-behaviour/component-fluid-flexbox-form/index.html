@@ -1,0 +1,52 @@
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    /* just for centering */
+    display: grid;
+    align-items: center;
+  }
+  /* cosmetic styles */
+  input {
+    border: none;
+    background: hsl(0 0% 93%);
+    border-radius: 4px;
+    padding: 12px 16px;
+  }
+  input[type='submit'] {
+    background: hotpink;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0.75rem 0.5rem -0.5rem hsl(0 50% 80%);
+  }
+
+  /* Flexbox configuration */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  form input {
+    flex: 1 1 80px;
+  }
+  form input[type='email'] {
+    flex: 3 1 240px;
+  }
+</style>
+
+<body class="container">
+  <form>
+    <input type="text" placeholder="Name" />
+    <input type="email" placeholder="Email Address" />
+    <input type="submit" value="Subscribe" />
+  </form>
+</body>

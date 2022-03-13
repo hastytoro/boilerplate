@@ -1,0 +1,51 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 6px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  aside,
+  main,
+  section {
+    border: 2px solid;
+  }
+  p {
+    font-size: 14px;
+  }
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 4px;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <aside>1️⃣ (200px)</aside>
+    <main>2️⃣ (1fr)</main>
+    <section>3️⃣ (2fr)</section>
+  </div>
+  <p>
+    Like flex-grow the fr unit is flexible. Our first column wants to take up
+    1/3rd of available space, but its child could be wider and so would grow to
+    accommodate it.
+  </p>
+  <p>
+    The grid reserves 200px for the first column. Then it distributes whatever
+    space remains to the other 2. This is how flex-grow works in Flexbox when we
+    don't set flex-basis: 0.
+  </p>
+  <p>* fr distributes available space.</p>
+  <p>
+    NOTE: This behaviour only happens with fr unit and auto but px, rems and %
+    values are all hard limits.
+  </p>
+</body>

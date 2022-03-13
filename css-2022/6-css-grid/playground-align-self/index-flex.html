@@ -1,0 +1,43 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* centering with Flexbox */
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+    padding: 16px;
+    border: 2px solid;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+  }
+  /* Self-alignment */
+  /* Re-cap: In Flexbox, align-items is used on the parent to control the cross-axis position for all of the elements.
+  But we also have align-self, which allows a specific child to overrule it: */
+  .box:last-of-type {
+    align-self: flex-start;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>

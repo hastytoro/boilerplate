@@ -1,0 +1,87 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* general styling */
+  article {
+    border-radius: 16px;
+    box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.2);
+  }
+  article img {
+    border-radius: 12px 12px 0px 0px;
+  }
+  article section {
+    padding: 8px 16px 16px;
+  }
+  article h2 {
+    margin-bottom: 8px;
+  }
+  article p {
+    font-weight: 300;
+  }
+
+  /* flex (shrink/grow) configuration with wrapping */
+  .wrapper {
+    display: flex;
+    gap: 16px;
+    /* introducing wrapping */
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  /* improving UX, toggle to see effects of constraints */
+  .card {
+    flex: 1 1 150px;
+    max-width: 250px; /* constraints */
+  }
+</style>
+
+<body>
+  <main class="wrapper">
+    <article class="card">
+      <img src="cover-art-lemons.jpg" />
+      <section>
+        <h2>Heading</h2>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        </p>
+      </section>
+    </article>
+    <article class="card">
+      <img src="cover-art-body-art.jpg" />
+      <section>
+        <h2>Heading</h2>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        </p>
+      </section>
+    </article>
+    <article class="card">
+      <img src="cover-entrance.jpg" />
+      <section>
+        <h2>Heading</h2>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        </p>
+      </section>
+    </article>
+  </main>
+</body>

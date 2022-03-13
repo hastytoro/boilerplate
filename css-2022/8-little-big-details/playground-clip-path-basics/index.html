@@ -1,0 +1,59 @@
+<style>
+  /* application colors: */
+
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  }
+  .box {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    background-color: rgba(255, 20, 145, 0.5);
+    border: 2px solid deeppink;
+    overflow: visible;
+  }
+  p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 6px;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  /* clipping with clip-path */
+  .square {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .triangle {
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="box"><p>default</p></div>
+    <div class="box square"><p>square</p></div>
+    <div class="box triangle"><p>triangle</p></div>
+  </div>
+</body>

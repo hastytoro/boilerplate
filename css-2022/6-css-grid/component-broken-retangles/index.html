@@ -1,0 +1,87 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+    background: black;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    --box-width: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100%;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+  }
+  .box {
+    width: var(--box-width);
+    height: 80px;
+  }
+  .box:nth-of-type(odd) {
+    justify-self: end;
+  }
+  /* before  */
+  .box.one {
+    background-color: pink;
+  }
+  .box.two {
+    background-color: pink;
+  }
+  .box.three {
+    background-color: lavender;
+  }
+  .box.four {
+    background-color: lavender;
+  }
+  .box.five {
+    background-color: honeydew;
+  }
+  .box.six {
+    background-color: honeydew;
+  }
+  /* after */
+  .box.one {
+    background-color: pink;
+    width: calc(var(--box-width) * 0.25);
+  }
+  .box.two {
+    background-color: pink;
+    width: calc(var(--box-width) * 0.75);
+  }
+  .box.three {
+    background-color: lavender;
+    width: calc(var(--box-width) * 0.5);
+  }
+  .box.four {
+    background-color: lavender;
+    width: calc(var(--box-width) * 0.5);
+  }
+  .box.five {
+    background-color: honeydew;
+    width: calc(var(--box-width) * 0.75);
+  }
+  .box.six {
+    background-color: honeydew;
+    width: calc(var(--box-width) * 0.25);
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="box one"></div>
+    <div class="box two"></div>
+    <div class="box three"></div>
+    <div class="box four"></div>
+    <div class="box five"></div>
+    <div class="box six"></div>
+  </div>
+</body>

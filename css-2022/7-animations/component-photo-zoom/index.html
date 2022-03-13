@@ -1,0 +1,64 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    place-content: center;
+    min-height: 100%;
+    gap: 8px;
+    padding: 16px;
+  }
+  /* animations */
+  .card {
+    transition: transform 500ms;
+  }
+  .card-placeholder:hover .card {
+    transform: scale(1.2);
+  }
+  .card-placeholder {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  /*
+    We add :hover pseudo classes 'listeners' that define special state of an element.
+    Generally that would apply to those interactive element(s) of your component like <a>, <button> or <input>.
+    That separation is helpful because now for example we can apply transforms resulted to image elements.
+    Here we applying the selector so that when we :hover over the parent <a> wrapper we select the child <img> within the grid layout and apply the transform.
+  */
+</style>
+
+<body>
+  <div class="wrapper">
+    <a href="/" class="card-placeholder">
+      <img alt="" class="card" src="1-unsplash.jpg" />
+    </a>
+    <a href="/" class="card-placeholder">
+      <img alt="" class="card" src="2-unsplash.jpg" />
+    </a>
+    <a href="/" class="card-placeholder">
+      <img alt="" class="card" src="3-unsplash.jpg" />
+    </a>
+    <a href="/" class="card-placeholder">
+      <img alt="" class="card" src="4-unsplash.jpg" />
+    </a>
+  </div>
+</body>

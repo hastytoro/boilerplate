@@ -1,0 +1,75 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+    /* centering content */
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+  .planet {
+    width: 80px;
+    height: 80px;
+    background: #00d2ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    border: 2px solid #3a7bd5;
+    border-radius: 50%;
+    /* centering content */
+    display: grid;
+    place-content: center;
+  }
+
+  /*
+    Our animation will first shift it 80px to the right, and then cause it to rotate in a 360deg circle. Because moon’s origin is in the center of the planet, it will orbit around at a distance.
+    NOTE: A common gotcha with transform, they don't work with display: inline elements in Flow layout.
+    Keep in mind that in-flow display: inline elements go with the flow. Their goal is to wrap around its child content with as little disruption as possible. A solution, switch to either inline-block, or a supporting and completely different layout mode, like Flexbox or Grid. */
+
+  .moon {
+    /* alternative centering content (out-of-flow)*/
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; */
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, #8d8d8d, #a1a19c, #b1b1ac, #c1c0bb);
+    border: 2px solid #8d8d8d;
+    border-radius: 50%;
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg) translateX(80px);
+    }
+    to {
+      transform: rotate(360deg) translateX(80px);
+    }
+  }
+
+  .animate {
+    animation: orbit 5s linear infinite;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="planet">
+      <div class="moon animate"></div>
+    </div>
+  </div>
+</body>

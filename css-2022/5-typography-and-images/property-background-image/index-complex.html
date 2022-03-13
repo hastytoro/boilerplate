@@ -1,0 +1,42 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* background configuration */
+  body {
+    background-image: url(geometric-pattern.png);
+    background-size: 450px;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    body {
+      background-image: url('geometric-pattern@2x.png');
+    }
+  }
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+    body {
+      background-image: url('geometric-pattern@3x.png');
+    }
+  }
+
+  /* flex configuration */
+  main {
+    height: 100%;
+    display: flex;
+    display: grid;
+    place-content: center;
+  }
+</style>
+
+<body>
+  <main>
+    <h1>Hello World</h1>
+  </main>
+</body>

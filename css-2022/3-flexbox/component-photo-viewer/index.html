@@ -1,0 +1,86 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* general style settings: */
+  body {
+    background: #1f1f1f;
+    color: white;
+  }
+  h1 {
+    padding: 16px 0px;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  button {
+    background-color: inherit;
+    color: white;
+    padding: 14px 26px;
+    border: 2px solid white;
+  }
+
+  /* TIER 1 - main Flexbox for horizontal direction */
+  .photo-viewer {
+    display: flex;
+    gap: 8px;
+  }
+  .photo-roll {
+    flex: 0 0 200px;
+  }
+  .photo-main {
+    flex: 1;
+  }
+  .photo {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: inherit;
+  }
+
+  /* TIER 2 - nested sub-Flexbox for vertical direction */
+  .photo-roll {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+  }
+  .photo-action {
+    margin-top: auto; /* consumes available space as margin*/
+  }
+
+  /* TIER 3 - nested sub-Flexbox */
+  .photo-action {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+
+<body>
+  <h1>Hipster Coffee</h1>
+  <section class="photo-viewer">
+    <div class="photo-roll">
+      <button class="photo">
+        <img src="./coffee-four.jpeg" />
+      </button>
+      <button class="photo">
+        <img src="coffee-two.jpeg" />
+      </button>
+      <div class="photo-action">
+        <button>Back</button>
+        <button>Next</button>
+      </div>
+    </div>
+    <div class="photo-main">
+      <img src="coffee-three.jpeg" />
+    </div>
+  </section>
+</body>

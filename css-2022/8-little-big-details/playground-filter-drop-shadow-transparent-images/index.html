@@ -1,0 +1,66 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+  img {
+    display: block;
+    width: 150px;
+  }
+  h4 {
+    text-align: center;
+    padding: 16px;
+  }
+  /*
+    Contoured Shadows
+    Many filters are designed to work well with <img>.
+
+    It seems like they're plucked from Photoshop! And filter: drop-shadow continues that trend.
+
+    In Photoshop, when you add a drop-shadow to a layer, it applies that shadow to cloud and opaque pixels in the layer.
+    * It doesn't form a rectangle around the layer itself!
+    This means that if we use filter: drop-shadow on an <img> that supports transparency (png, gif, svg) the shadow will apply all non-transparent parts.
+      
+    This effect works for any DOM node!
+    Here we have children that spill out of their enclosing container.
+  */
+  .box-shadow {
+    box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.6);
+  }
+  .drop-shadow {
+    filter: drop-shadow(2px 4px 32px rgba(0, 0, 0, 0.6));
+  }
+</style>
+
+<body>
+  <article>
+    <div class="placeholder">
+      <h4>none</h4>
+      <img src="/me-light.png" alt="" />
+    </div>
+    <div class="placeholder">
+      <h4>box-shadow</h4>
+      <img class="box-shadow" src="/me-light.png" alt="" />
+    </div>
+    <div class="placeholder">
+      <h4>drop-shadow</h4>
+      <img class="drop-shadow" src="me-light.png" alt="" />
+    </div>
+  </article>
+</body>

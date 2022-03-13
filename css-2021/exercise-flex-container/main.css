@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.2rem;
+}
+
+body {
+	background: #b3b3b3;
+	padding: 5px;
+	margin: 0;
+}
+
+.flex-container {
+	background: white;
+	padding: 10px;
+	border: 5px solid black;
+	height: 800px;
+	 /* uncomment to change the default block layout of your div elements: */
+	 /* flex-flow: row nowrap; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items:center;
+	justify-content: flex-start;
+}
+
+.item-1 {
+	background: #ff7300;
+	color: white;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 10px;
+}
+
+.item-2 {
+	background: #ff9640;
+	color: white;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 10px;
+	width: 250px;
+}
+
+.item-3 {
+	background: #ff9640;
+	color: white;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 10px;
+	height: 250px;
+	/* align-self: flex-start; */
+}
+
+.item-4 {
+	background: #f5c096;
+	color: white;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 10px;
+	width: 300px;
+	height: 300px;
+	/* order: 1; */
+}
+
+.item-5 {
+	background: #d3c0b1;
+	color: white;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 10px;
+	width: 350px;
+	/* flex-basis: 300px; */
+}
+
+.item-6 {
+	background: #d3c0b1;
+	color: white;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 10px;
+	width: 350px;
+}
+

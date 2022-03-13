@@ -1,0 +1,53 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  p {
+    background: black;
+    color: white;
+    padding: 8px;
+    margin: 12px 0px;
+  }
+  .wrapper > * {
+    border: 2px solid;
+    padding: 16px;
+  }
+
+  /* grid configuration */
+  /*
+    Using align-content is how we align the rows in our grid:
+    NOTE: that this only works because we've given our grid a fixed height.
+    Without that declaration align-content has no effect as the rows will be packed in like sardines!
+    We need free space in the grid otherwise there really isn't any difference between the options.
+  */
+  /*
+    Now how about align-items?
+    It controls the child element's vertical position within the row.
+    We control the placement of individual grid elements within each cell.
+  */
+  .wrapper {
+    display: grid;
+    /* toggle between properties */
+    /* align-content: space-between; */
+    align-items: center;
+    height: 100%;
+    border: 2px solid pink;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <header>Hello World</header>
+    <section>Stuff here</section>
+    <footer>Copyright notice</footer>
+  </div>
+</body>

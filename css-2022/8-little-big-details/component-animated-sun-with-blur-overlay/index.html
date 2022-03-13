@@ -1,0 +1,61 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  body {
+    display: grid;
+    place-content: center;
+    background: black;
+  }
+  .wrapper {
+    position: relative;
+    height: 100%;
+  }
+  .gradient {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(deeppink, red, coral, gold, white);
+  }
+  /*
+    Here we have decorative <div> gradient background-image.
+    We duplicate that <div> so that we have a variant that we absolute position to ensure that both occupy the same space.
+    The wrapper is the 'ancestor' relative and acting containing block.
+    The regular <div> is relative positioned so that it follows the DOM order meaning it overlays its sibling that is defined earlier HTML tree.
+  */
+  .blurry {
+    position: absolute;
+    filter: blur(50px);
+    transform: scale(1.5) translateX(10%) rotate(20deg);
+    /* default/exiting */
+    transition: filter 1s, transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+  /* entering */
+  .wrapper:hover .blurry {
+    filter: blur(15px);
+    transform: scale(1) translateX(0%) rotate(0deg);
+    transition: filter 1s, transform 500ms ease-out;
+    transition-delay: 200ms;
+  }
+  .overlay {
+    position: relative;
+    filter: drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.3));
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="gradient blurry"></div>
+    <div class="gradient overlay"></div>
+  </div>
+</body>

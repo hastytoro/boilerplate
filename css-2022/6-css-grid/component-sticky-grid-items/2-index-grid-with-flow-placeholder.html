@@ -1,0 +1,183 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* cosmetic styles: */
+  .wrapper > * {
+    padding: 8px;
+  }
+  header {
+    height: 5rem;
+    border-bottom: 3px solid;
+  }
+  main {
+    /* height, to simulate content. */
+    min-height: 180vh;
+    border: 3px solid;
+  }
+  footer {
+    height: 5rem;
+    border: 3px solid;
+  }
+  .card {
+    /* sub-grid used for centering */
+    display: grid;
+    place-content: center;
+  }
+
+  /* grid configuration: */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    grid-template-areas:
+      'header header'
+      'sidebar main-content'
+      'footer footer';
+    gap: 16px;
+    --header-height: 5rem;
+    isolation: isolate;
+  }
+
+  header {
+    grid-area: header;
+    background: lightyellow;
+  }
+  aside {
+    grid-area: sidebar;
+    background: lightblue;
+  }
+  main {
+    grid-area: main-content;
+    background: lightgreen;
+  }
+  footer {
+    grid-area: footer;
+    background: lightcoral;
+  }
+
+  /* flow layout configuration */
+  header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 3px solid;
+  }
+  /*
+    Nesting elements in a supported in-Flow placeholder.  
+    Switch <aside> back to following the Grid layout rules as a general grid item in your container.
+    Next we define a DOM node that itself will be the acting/nested content-box (containing block) as a sticky placeholder.
+    Its children will then understand its Position layout separately.
+    
+    L0 <div> display: grid layout container ⬇️
+    L1 <aside> grid-area: sidebar as a child grid item ⬇️
+    L2 placeholder <div> position: sticky (in-Flow) ⬇️
+    L3 content that is sticking <h2>, <nav>, <ol> and <li>.
+  */
+  .placeholder {
+    position: sticky;
+    top: var(--header-height);
+  }
+  aside {
+    align-self: start;
+    z-index: 1;
+    border: 2px solid red;
+  }
+  footer {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <header class="card">
+      <h1>My Website</h1>
+    </header>
+    <aside>
+      <div class="placeholder">
+        <h2>Chicken Cacciatore</h2>
+        <nav>
+          <ol>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+            <li>Introduction</li>
+            <li>Prep</li>
+            <li>Cooking</li>
+            <li>Reviews</li>
+          </ol>
+        </nav>
+      </div>
+    </aside>
+    <main class="card">Main Content</main>
+    <footer class="card">Copyright</footer>
+  </div>
+</body>

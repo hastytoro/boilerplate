@@ -1,0 +1,57 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 2px;
+  }
+  .wrapper {
+    border: 2px solid #000;
+    height: 100%;
+  }
+  .wrapper {
+    /* Default configuration: */
+    display: flex;
+    flex-direction: row; /* default primary axis direction */
+    justify-content: flex-start;
+    align-items: stretch;
+
+    /* 1) Align items along the primary axis. */
+    /* justify-content: flex-end; */
+
+    /* 2) Align items along the cross axis. */
+    /* align-items: flex-end; */
+
+    /* 3) Changing flex-direction (rotates) your primary and cross-axis flipping them around. But the same rules apply to the justify-content or align-items properties. Meaning your items will move either from top to bottom or left to right depending on the respective axis configuration.  */
+    /* flex-direction: column; */
+
+    /* 4) Additionally your handy justify-content and align-items properties also own an independent set of options. They also work on available space within the primary and cross axis. */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* NOTE: why does align items not have a space-between value? Well it makes sense if you think about it, because with a Flexbox container, you have only one main (primary axis) flex-direction.*/
+  }
+
+  .card {
+    height: 100%; /* 100% of the parent container */
+    /* height: 200px; */
+    padding: 10px;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="card" style="background-color: #ffc0cb">1</div>
+    <div class="card" style="background-color: #e6e6fa">2</div>
+    <div class="card" style="background-color: #d8bfd8">3</div>
+    <div class="card" style="background-color: #ffdab9">4</div>
+  </div>
+</body>

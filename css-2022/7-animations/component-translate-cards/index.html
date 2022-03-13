@@ -1,0 +1,75 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  img {
+    width: 64px;
+    height: 64px;
+  }
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    place-content: center;
+    min-height: 100%;
+    gap: 8px;
+    padding: 16px;
+    background: #d1d1fa;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    border-radius: 8px;
+    border: 2px solid hsl(240deg 100% 75%);
+    background: white;
+  }
+  /* animations */
+  .card {
+    transition: transform 250ms;
+  }
+  .card-link:hover .card {
+    transform: translateY(-16px);
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <a href="/" class="card-link">
+      <article class="card">
+        <img alt="Chrome" src="chrome.svg" />
+      </article>
+    </a>
+    <a href="/" class="card-link">
+      <article class="card">
+        <img alt="Firefox" src="firefox.svg" />
+      </article>
+    </a>
+    <a href="/" class="card-link">
+      <article class="card">
+        <img alt="Safari" src="safari.png" />
+      </article>
+    </a>
+    <a href="/" class="card-link">
+      <article class="card">
+        <img alt="Edge" src="edge.svg" />
+      </article>
+    </a>
+    <a href="/" class="card-link">
+      <article class="card">
+        <img alt="Opera" src="opera.svg" />
+      </article>
+    </a>
+  </div>
+</body>

@@ -1,0 +1,41 @@
+/* * https: //css-tricks.com/almanac/properties/p/perspective/ */
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.parent {
+  width: 50%;
+  display: inline-block;
+  padding: .5rem;
+}
+
+.child {
+  margin: .5rem;
+  width: 6rem;
+  height: 6rem;
+  background: tomato;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, .5);
+}
+
+/* On the left side, you can see the property applied to the parent (perspective: 50em) of transformed elements (transform: rotateY(50deg)). */
+.parent.perspective {
+  perspective: 50rem;
+}
+
+.parent.perspective .child {
+  transform: rotateX(50deg);
+  background: tomato;
+}
+
+/* On the right side, the perspective is applied from the transform directly on children (transform: perspective(50em) rotateY(50deg)). */
+.parent.transform .child {
+  transform: perspective(50rem) rotateX(50deg);
+  background: deepskyblue;
+}
+
+h1 {
+  font-size: 1rem;
+}

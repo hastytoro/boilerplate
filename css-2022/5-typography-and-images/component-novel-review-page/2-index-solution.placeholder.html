@@ -1,0 +1,105 @@
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+  }
+  /* css reset */
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: rgb(13, 4, 31);
+  }
+
+  /* decorative styling  */
+  .reviews {
+    text-align: center;
+  }
+  .average-rating {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 32px;
+    color: gold;
+    font-style: italic;
+  }
+  .author {
+    font-weight: bold;
+  }
+
+  /* image settings */
+  /* Solution, by wrapping images in nested container, we conveniently sidestep all of these strange issues and can apply the flex shorthand on these inner “placeholder” <div> children instead.  */
+  /* Remember, your Flexbox container controls placement/distribution among blocks of stuff. An image is treated the same as text etc as flex content. They don’t belong as a direct children alone.  */
+  img {
+    width: 100%;
+    object-fit: contain;
+    object-position: -32px 0;
+    filter: drop-shadow(-8px 32px 10px hsl(260deg 50% 4% / 0.5));
+  }
+
+  /* flex configuration */
+  .wrapper {
+    display: flex;
+    gap: 32px 0;
+    flex-wrap: wrap;
+  }
+
+  .placeholder,
+  .reviews {
+    flex: 1;
+    min-width: 300px;
+  }
+</style>
+<body>
+  <main class="wrapper">
+    <div class="placeholder">
+      <img alt="" class="book-img" src="whispering-owl.png" />
+    </div>
+    <div class="reviews">
+      <blockquote class="review">
+        A magnificent story about a majestic creature.
+        <footer>
+          <cite class="author">@jamesbond</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        It was clear that this book would soar.
+        <footer>
+          <cite class="author">@mightyeagle</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        Some have said that it is a real book, with no evidence of that.
+        <footer>
+          <cite class="author">@skeptic1977</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        If you only read one book, this should be the one.
+        <footer>
+          <cite class="author">@knuckles</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        A magnificent story about a boy and an owl!
+        <footer>
+          <cite class="author">@kitkat99</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        Above my expectations, just terrific.
+        <footer>
+          <cite class="author">@hastytoro</cite>
+        </footer>
+      </blockquote>
+      <div class="average-rating">
+        ★★★★☆
+        <br />
+        Average Amazon Rating
+      </div>
+    </div>
+  </main>
+</body>

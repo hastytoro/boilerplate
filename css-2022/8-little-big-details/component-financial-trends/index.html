@@ -1,0 +1,222 @@
+<style>
+  html {
+    --color-bg: hsl(0deg 0% 25%);
+    --color-text: hsl(0deg 0% 75%);
+    --color-line-1: hsl(355deg 100% 60%);
+    --color-line-2: hsl(110deg 50% 40%);
+  }
+  /* css reset: */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  * {
+    font-family: 'Inter';
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  header button {
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background: hsl(0deg 0% 0% / 0.2);
+    color: hsl(40deg 100% 60%);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .legend .box {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+  }
+  .legend .box.google {
+    background-color: var(--color-line-1);
+  }
+  .legend .box.amazon {
+    background-color: var(--color-line-2);
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .graph-prefix {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .graph-wrapper {
+    position: relative;
+    padding: 4px;
+    border: 2px solid hsl(0deg 0% 100% / 0.1);
+  }
+
+  .legend {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    background: hsl(0deg 0% 0% / 0.1);
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  .google-line {
+    stroke-width: 4px;
+    stroke: var(--color-line-1);
+  }
+  .amazon-line {
+    stroke-width: 4px;
+    stroke: var(--color-line-2);
+    stroke-dasharray: 8px 8px;
+  }
+</style>
+
+<body>
+  <header>
+    <h1>Financial Trends</h1>
+    <div>
+      <button>Log Out</button>
+    </div>
+  </header>
+
+  <main>
+    <p class="graph-prefix">
+      Comparing <strong>Google</strong> and <strong>Amazon</strong>:
+    </p>
+
+    <div class="graph-wrapper">
+      <ol class="legend">
+        <li class="legend-item"><span class="box google"></span>Google</li>
+        <li class="legend-item"><span class="box amazon"></span>Amazon</li>
+      </ol>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="800"
+        height="300"
+        viewBox="0 0 800 300"
+        fill="none"
+      >
+        <path
+          class="google-line"
+          d="
+            M 0, 299
+            L 20, 297
+            L 40, 295
+            L 60, 296
+            L 80, 290
+            L 100, 280
+            L 120, 292
+            L 140, 271
+            L 160, 252
+            L 180, 258
+            L 200, 232
+            L 220, 240
+            L 240, 255
+            L 260, 261
+            L 280, 255
+            L 300, 252
+            L 320, 259
+            L 340, 246
+            L 360, 240
+            L 380, 231
+            L 400, 212
+            L 420, 218
+            L 440, 208
+            L 460, 200
+            L 480, 199
+            L 500, 190
+            L 520, 213
+            L 540, 188
+            L 560, 184
+            L 580, 190
+            L 600, 198
+            L 620, 193
+            L 640, 197
+            L 660, 191
+            L 680, 195
+            L 700, 188
+            L 720, 182
+            L 740, 200
+            L 760, 171
+            L 780, 192
+            L 800, 180
+          "
+        />
+        <path
+          class="amazon-line"
+          d="
+            M 0, 298
+            L 20, 291
+            L 40, 289
+            L 60, 292
+            L 80, 270
+            L 100, 271
+            L 120, 232
+            L 140, 245
+            L 160, 212
+            L 180, 199
+            L 200, 197
+            L 220, 168
+            L 240, 172
+            L 260, 141
+            L 280, 172
+            L 300, 190
+            L 320, 201
+            L 340, 235
+            L 360, 220
+            L 380, 211
+            L 400, 204
+            L 420, 209
+            L 440, 232
+            L 460, 200
+            L 480, 188
+            L 500, 172
+            L 520, 155
+            L 540, 165
+            L 560, 123
+            L 580, 131
+            L 600, 140
+            L 620, 136
+            L 640, 117
+            L 660, 90
+            L 680, 92
+            L 700, 80
+            L 720, 81
+            L 740, 120
+            L 760, 150
+            L 780, 168
+            L 800, 170
+          "
+        />
+      </svg>
+    </div>
+  </main>
+</body>

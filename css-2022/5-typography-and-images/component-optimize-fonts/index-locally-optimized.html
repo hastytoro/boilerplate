@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <!-- Remove google <link> once the font is saved locally. -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300 900;
+      font-display: fallback;
+      src: url(./fonts/optimized.woff2) format('woff2');
+    }
+
+    * {
+      font-family: 'Inter';
+    }
+  </style>
+  <body>
+    <h1>Hello World</h1>
+    <p>The font we using is Inter.</p>
+    <p>
+      Right click the optimized (hashed) file within the DevTools and choose to
+      Open in new tab to download the actual font file. Now copy and rename it
+      into your local project /public/font folder.
+    </p>
+    <p>
+      Optionally we can implement a self-hosted font. Google Fonts has done all
+      the hard work for us, optimizing the font. We can rather serve it locally,
+      saving on request(s) that would occur.
+    </p>
+    <p>
+      Now we use the @font-face at-rule that specifies a custom font. The font
+      can be loaded from either a remote server or in this case
+      locally-installed.
+    </p>
+    <div id="root"></div>
+  </body>
+</html>

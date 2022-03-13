@@ -1,0 +1,52 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* centering with Flexbox */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+    height: 100%;
+    border: 2px solid;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+  }
+  /* Self-alignment */
+  /* Now align-self works much the same way when applied to a specific grid child it changes their vertical position in the grid cell.
+  And justify-self changes an element horizontal position in the cell. */
+  .box {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+  }
+
+  .box:last-of-type {
+    align-self: end;
+    justify-self: end;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>

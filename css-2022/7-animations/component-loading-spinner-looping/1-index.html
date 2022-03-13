@@ -1,0 +1,40 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .spinner {
+    /* centering content in-Flow layout*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  /* animations */
+  @keyframes spin {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+</style>
+
+<body>
+  <img class="spinner" src="/spinner.svg" />
+</body>

@@ -1,0 +1,51 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* general styling: */
+  .item,
+  .box {
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 64px 1fr 100px;
+    min-height: 100%;
+  }
+  /*
+    Explicit
+    When creating the holy grail layout, it's common to give each row an
+    explicit height. We can do this with the grid-template-rows property.
+
+    We've created three rows: 64px header, 100px footer, and main content fills
+    the remaining space.
+    
+    NOTE: in order for grid to fill the page, we've had to use the min-height:
+    100% percentage seen earlier. We could also set min-height: 100vh, but it's
+    not quite as mobile-friendly.
+  */
+</style>
+
+<body>
+  <div class="wrapper">
+    <header style="background: peachpuff">header</header>
+    <main style="background: paleturquoise">main content goes here</main>
+    <footer style="background: palevioletred">footer</footer>
+  </div>
+</body>

@@ -1,0 +1,44 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100%;
+    padding: 6px;
+  }
+  /* decorative styles */
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    border: 3px solid;
+    border-radius: 8px;
+  }
+
+  .flourish {
+    position: absolute;
+    border-radius: 100px;
+    width: 75px;
+    height: 75px;
+  }
+  .flourish.one {
+    background: slateblue;
+    right: -40px;
+    top: -20px;
+  }
+  .flourish.two {
+    background: deeppink;
+    right: 0px;
+    top: -45px;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="flourish one"></div>
+    <div class="flourish two"></div>
+  </div>
+</body>

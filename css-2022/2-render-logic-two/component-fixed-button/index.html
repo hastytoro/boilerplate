@@ -1,0 +1,44 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* Decorative properties */
+  .help-btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: hsl(345deg, 100%, 40%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 3px solid white;
+    box-shadow: 2px 2px 20px hsl(248deg 80% 40% / 0.33);
+    cursor: pointer;
+  }
+  .help-btn {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+  }
+
+  /* artificially boost the size of the body
+  so the window frame can be scrolled.*/
+  html {
+    height: 100%;
+  }
+  body {
+    height: 150%;
+  }
+</style>
+<body>
+  <button class="help-btn">Help</button>
+</body>

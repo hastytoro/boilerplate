@@ -1,0 +1,83 @@
+<style>
+ /* css reset */
+ * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic styles */
+  nav,
+  main {
+    padding: 16px;
+  }
+  img {
+    display: block;
+    width: 300px;
+    margin: 16px 0 64px;
+    border: transparent;
+    border-radius: 5px;
+  }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .wrapper {
+    display: flex;
+    align-items: flex-start; /* heavy handed approach as it affects whole container */
+  }
+  /* A better approach would be targeting just that individual item instead of all of them. Use align-self for the alignment of a selected item inside the whole flexible container. */
+  nav {
+    /* align-self: flex-start; */ /* toggle property */
+    border: 2px solid blue;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  main {
+    border: 2px solid red;
+    flex: 1;
+  }
+</style>
+<body>
+  <section class="wrapper">
+    <nav class="box">
+      <h2>Navigation</h2>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main class="box">
+      <h3>Heading</h3>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit ..."</p>
+      <img src="architecture-hugo-sousa.jpg" />
+      <h3>Heading</h3>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum."
+      </p>
+      <img src="architecture-joel-filipe.jpg" />
+      <h3>Heading</h3>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Sunt in culpa qui officia deserunt
+        mollit anim id est laborum."
+      </p>
+      </p>
+      <img src="architecture-julien-moreau.jpg" />
+    </main>
+  </section>
+</body>

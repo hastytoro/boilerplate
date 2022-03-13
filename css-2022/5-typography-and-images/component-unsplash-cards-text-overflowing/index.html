@@ -1,0 +1,144 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  /* general styling */
+  header {
+    padding: 8px 0;
+  }
+  article {
+    border-radius: 6px;
+    box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.2);
+  }
+  article img {
+    border-radius: 6px 6px 0px 0px;
+  }
+  article section {
+    padding: 8px 16px 16px;
+  }
+  article h2 {
+    margin-bottom: 8px;
+  }
+  article p {
+    font-weight: 300;
+  }
+
+  /* flex (shrink/grow) configuration with wrapping */
+  .wrapper {
+    display: flex;
+    gap: 16px;
+    /* introducing wrapping */
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1 1 200px;
+  }
+
+  /* improving UX, toggle to see effects of constraints */
+  .card img {
+    /* min-height: 200px; */ /* not required when using flex-basis above */
+    aspect-ratio: 1 / 1;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* We can improve this by adding a multi-line ellipsis and hyphenation to the responsive Flexbox. */
+  p {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+</style>
+
+<body>
+  <header>
+    <h1>Norway</h1>
+  </header>
+  <main class="wrapper">
+    <article class="card">
+      <img src="1-unsplash.jpg" />
+      <section>
+        <h4>@johnonolan</h4>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          mollis diam eget faucibus pellentesque. In consectetur metus eu lectus
+          consectetur auctor. Sed vitae aliquam augue. Vestibulum laoreet
+          gravida risus, sed ornare neque luctus faucibus. Quisque rhoncus
+          commodo velit at rhoncus. Sed eget vehicula tortor. Nulla vel nunc ac
+          arcu condimentum molestie. Sed laoreet eros ut risus ultrices, ac
+          dictum velit feugiat. Morbi volutpat mi ex, ac vehicula metus
+          fringilla elementum. Nulla sem lectus, consequat non turpis eu,
+          elementum tempor ex."
+        </p>
+      </section>
+    </article>
+    <article class="card">
+      <img src="2-unsplash.jpg" />
+      <section>
+        <h4>@lightscape</h4>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          mollis diam eget faucibus pellentesque. In consectetur metus eu lectus
+          consectetur auctor. Sed vitae aliquam augue. Vestibulum laoreet
+          gravida risus, sed ornare neque luctus faucibus. Quisque rhoncus
+          commodo velit at rhoncus. Sed eget vehicula tortor. Nulla vel nunc ac
+          arcu condimentum molestie. Sed laoreet eros ut risus ultrices, ac
+          dictum velit feugiat. Morbi volutpat mi ex, ac vehicula metus
+          fringilla elementum. Nulla sem lectus, consequat non turpis eu,
+          elementum tempor ex."
+        </p>
+      </section>
+    </article>
+    <article class="card">
+      <img src="3-unsplash.jpg" />
+      <section>
+        <h4>@michaelfousert</h4>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          mollis diam eget faucibus pellentesque. In consectetur metus eu lectus
+          consectetur auctor. Sed vitae aliquam augue. Vestibulum laoreet
+          gravida risus, sed ornare neque luctus faucibus. Quisque rhoncus
+          commodo velit at rhoncus. Sed eget vehicula tortor. Nulla vel nunc ac
+          arcu condimentum molestie. Sed laoreet eros ut risus ultrices, ac
+          dictum velit feugiat. Morbi volutpat mi ex, ac vehicula metus
+          fringilla elementum. Nulla sem lectus, consequat non turpis eu,
+          elementum tempor ex."
+        </p>
+      </section>
+    </article>
+    <article class="card">
+      <img src="4-unsplash.jpg" />
+      <section>
+        <h4>@vidarnm</h4>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          mollis diam eget faucibus pellentesque. In consectetur metus eu lectus
+          consectetur auctor. Sed vitae aliquam augue. Vestibulum laoreet
+          gravida risus, sed ornare neque luctus faucibus. Quisque rhoncus
+          commodo velit at rhoncus. Sed eget vehicula tortor. Nulla vel nunc ac
+          arcu condimentum molestie. Sed laoreet eros ut risus ultrices, ac
+          dictum velit feugiat. Morbi volutpat mi ex, ac vehicula metus
+          fringilla elementum. Nulla sem lectus, consequat non turpis eu,
+          elementum tempor ex."
+        </p>
+      </section>
+    </article>
+  </main>
+</body>

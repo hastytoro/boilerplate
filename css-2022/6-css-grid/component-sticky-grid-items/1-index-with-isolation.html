@@ -1,0 +1,188 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* cosmetic styles: */
+  .wrapper > * {
+    padding: 8px;
+  }
+  header {
+    height: 5rem;
+    border-bottom: 3px solid;
+  }
+  main {
+    /* height, to simulate content. */
+    min-height: 180vh;
+    border: 3px solid;
+  }
+  footer {
+    height: 5rem;
+    border: 3px solid;
+  }
+  .card {
+    /* sub-grid used for centering */
+    display: grid;
+    place-content: center;
+  }
+
+  /* grid configuration: */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    grid-template-areas:
+      'header header'
+      'sidebar main-content'
+      'footer footer';
+    gap: 16px;
+    --header-height: 5rem;
+    isolation: isolate;
+  }
+
+  header {
+    grid-area: header;
+    background: lightyellow;
+  }
+  aside {
+    grid-area: sidebar;
+    background: lightblue;
+  }
+  main {
+    grid-area: main-content;
+    background: lightgreen;
+  }
+  footer {
+    grid-area: footer;
+    background: lightcoral;
+  }
+
+  /* flow layout configuration */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: var(--header-height);
+    border-bottom: 3px solid;
+  }
+  /*
+    Well let’s get <aside> to stick at the right position.
+    We can create a CSS variable that used as a delta.
+    It is holding the measurement needed by the edge properties of children sticky elements.
+
+    For that variable to be available to sibling elements, make sure its assigned to the right parent within the DOM tree.
+    Now as we scroll the <aside> from the top: var(variable) will stick. 
+    We have the same problem now seen earlier that the sticky Position algorithm does not support and will not notice the grid lines, being the bottom of our <aside> grid child.
+    
+    To solve this problem we can ensure that the <aside> content is in a placeholder container that is in-Flow.
+    See second index.html snippet for solution.
+  */
+  aside {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 1;
+    border: 2px solid red;
+    align-self: start;
+  }
+  footer {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <header class="card">
+      <h1>My Website</h1>
+    </header>
+    <aside>
+      <h2>Chicken Cacciatore</h2>
+      <nav>
+        <ol>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+          <li>Introduction</li>
+          <li>Prep</li>
+          <li>Cooking</li>
+          <li>Reviews</li>
+        </ol>
+      </nav>
+    </aside>
+    <main class="card">Main Content</main>
+    <footer class="card">Copyright</footer>
+  </div>
+</body>

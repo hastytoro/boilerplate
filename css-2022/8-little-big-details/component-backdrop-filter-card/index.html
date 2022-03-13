@@ -1,0 +1,62 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  body {
+    display: grid;
+    place-content: center;
+    background: black;
+  }
+  a {
+    background: blue;
+    position: relative;
+    overflow: hidden;
+  }
+  img {
+    display: block;
+    width: 400px;
+    border-radius: 8px;
+  }
+  /*
+    The filter property will apply an svg filter to the selected element.
+    But what if we want to blur() everything behind the element?
+    We can accomplish this task using the backdrop-filter property.
+  */
+  .blur-circle {
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  /* exiting/default */
+  .blur-circle {
+    backdrop-filter: blur(6px) brightness(80%);
+    transition: backdrop-filter 800ms;
+  }
+  /* entering */
+  a:hover .blur-circle,
+  a:focus .blur-circle {
+    backdrop-filter: blur(0px) brightness(100%);
+    transition: backdrop-filter 350ms;
+  }
+</style>
+
+<body>
+  <a href="/">
+    <img alt="Tokyo, Japan" src="/unsplash.jpg" />
+    <div class="blur-circle"></div>
+  </a>
+</body>

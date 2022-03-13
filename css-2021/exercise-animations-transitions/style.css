@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.container {
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 {
+  width: 150px;
+  height: 150px;
+  background: rgb(255, 20, 147, 0.5);
+  border: 5px deeppink solid;
+  border-radius: 6px;
+  transition: all 2s ease;
+
+}
+
+.box1:hover {
+  height: 200px;
+  width: 200px;
+  background: rgb(220, 20, 60, 0.50);
+  border: 5px crimson solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.box2 {
+  width: 150px;
+  height: 150px;
+  background: rgb(0, 139, 139, 0.5);
+  border: 5px darkcyan solid;
+  border-radius: 6px;
+  transition: all 2s linear;
+}
+
+.box2:hover {
+  height: 200px;
+  width: 200px;
+  background: rgb(65, 105, 225, 0.5);
+  border: 5px cornflowerblue solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.box3 {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 140, 0, 0.5);
+  border: 5px darkorange solid;
+  border-radius: 6px;
+  transition: all 2s ease-in;
+}
+
+.box3:hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(210, 105, 30, 0.50);
+  border: 5px chocolate solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.box4 {
+  width: 150px;
+  height: 150px;
+  background: rgba(34, 139, 34, 0.5);
+  border: 5px forestgreen solid;
+  border-radius: 6px;
+  transition: all 2s ease-out;
+}
+
+.box4:hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(144, 238, 144, 0.50);
+  border: 5px lightgreen solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.box5 {
+  width: 150px;
+  height: 150px;
+  background: rgba(153, 50, 204, 0.50);
+  border: 5px darkorchid solid;
+  border-radius: 6px;
+  transition: all 2s ease-in-out;
+}
+
+.box5:hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(75, 0, 130, 0.5);
+  border: 5px indigo solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.box6 {
+  width: 150px;
+  height: 150px;
+  background: rgb(20, 115, 230, 0.50);
+  border: 5px rgb(20, 115, 230) solid;
+  border-radius: 6px;
+  transition: all 2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.box6:hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(70, 130, 180, 0.5);
+  border: 5px steelblue solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}

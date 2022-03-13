@@ -1,0 +1,72 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  img {
+    display: block;
+    width: 250px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.4);
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  /* color manipulation */
+  .brightness {
+    filter: brightness(150%);
+  }
+  .contrast {
+    filter: contrast(60%);
+  }
+  .sepia {
+    filter: sepia(100%);
+  }
+  .mixed {
+    filter: contrast(200%) grayscale(90%);
+  }
+  .blur {
+    filter: blur(2px);
+  }
+</style>
+
+<body>
+  <section>
+    <div>
+      <h3>Default (no filter)</h3>
+      <img alt="" src="akihabara.jpg" class="none" />
+    </div>
+    <div>
+      <h3>Boosted Brightness</h3>
+      <img alt="" src="akihabara.jpg" class="brightness" />
+    </div>
+    <div>
+      <h3>Lowered Contrast</h3>
+      <img alt="" src="akihabara.jpg" class="contrast" />
+    </div>
+    <div>
+      <h3>Sepia</h3>
+      <img alt="" src="akihabara.jpg" class="sepia" />
+    </div>
+    <div>
+      <h3>Contrast + grayscale</h3>
+      <img alt="" src="akihabara.jpg" class="mixed" />
+    </div>
+    <div>
+      <h3>Blur</h3>
+      <img alt="" src="akihabara.jpg" class="blur" />
+    </div>
+  </section>
+</body>

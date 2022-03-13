@@ -1,0 +1,50 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* general styling */
+  a {
+    color: inherit;
+    text-decoration: none;
+    padding: 16px;
+  }
+
+  .wrapper {
+    height: 100%;
+    max-width: 250px;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a:hover {
+    font-weight: bold;
+    color: crimson;
+  }
+  /* So far we've been aligning all children within a group. But what if we want a specific child to have different alignment? Flexbox has the align-self property to manage this situation! */
+  /* Important: The align-self property overrides the flexible container's align-items property. */
+  a:first-of-type {
+    align-self: flex-start;
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <a href="" style="font-weight: bold">← Go back</a>
+    <a href="">View account</a>
+    <a href="">Make a transfer</a>
+    <a href="">Request a loan</a>
+    <a href="">Trade Equity</a>
+    <a href="">See Portfolio</a>
+    <a href="">Contact support</a>
+  </section>
+</body>

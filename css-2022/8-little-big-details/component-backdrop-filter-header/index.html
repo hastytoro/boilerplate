@@ -1,0 +1,72 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  body {
+    /* Make sure there's enough to scroll */
+    min-height: 150vh;
+  }
+  .wrapper {
+    padding: 32px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    padding: 32px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  h2 {
+    margin-bottom: 16px;
+  }
+  .intro {
+    margin-bottom: 16px;
+  }
+  ol {
+    padding: 32px;
+  }
+
+  /* blurring header */
+  header {
+    background: hsl(0deg 0% 100% / 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+</style>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Course Platform</h1>
+    </header>
+
+    <main>
+      <h2>Module 1: Rendering Logic I</h2>
+      <p class="intro">
+        Flow layout is the “OG” layout algorithm of the web, and it's still used
+        heavily today. In this module, we explore how to best use Flow layout in
+        modern times. We'll also deepen our understanding of common fundamentals
+        like the Box Model.
+      </p>
+
+      <ol>
+        <li>Built-in Declarations and Inheritance</li>
+        <li>The Cascade</li>
+        <li>Directions</li>
+        <li>Box Model</li>
+        <li>Flow Layout</li>
+        <li>etc...</li>
+      </ul>
+    </main>
+  </div>
+</body>

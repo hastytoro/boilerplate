@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+h1 { color: black; }
+
+/* only perspective property */
+.container-property {
+    margin: 150px auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    perspective-origin: 500px;
+}
+
+.box-property {
+    background: rgba(255, 0, 0, 0.5);
+    border: 5px red solid;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(30deg) rotateY(80deg);
+}
+
+/* only perspective function */
+.container-function {
+    margin: 150px auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.box-function {
+    background: rgba(255, 0, 0, 0.5);
+    border: 5px red solid;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transform: perspective(120px) rotateX(50deg) rotateY(0deg);
+}

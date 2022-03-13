@@ -1,0 +1,61 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .box {
+    /* centering content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    background: black;
+    color: white;
+    padding: 8px;
+    margin: 12px 0px;
+  }
+  .wrapper > * {
+    border: 2px solid;
+    padding: 16px;
+  }
+
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 2px;
+    justify-content: center;
+  }
+  .item {
+    justify-items: center;
+  }
+</style>
+<body>
+  <p>justify-content - applies to the grid structure changing the columns.</p>
+  <div class="wrapper">
+    <div class="box">Hello</div>
+    <div class="box">Bonjour</div>
+    <div class="box">Zdravstvuyte</div>
+    <div class="box">こんにちは</div>
+  </div>
+  <p>
+    justify-items - applies to individual grid child items without affecting the
+    container.
+  </p>
+  <div class="wrapper item">
+    <div class="box">Hello</div>
+    <div class="box">Bonjour</div>
+    <div class="box">Zdravstvuyte</div>
+    <div class="box">こんにちは</div>
+  </div>
+</body>

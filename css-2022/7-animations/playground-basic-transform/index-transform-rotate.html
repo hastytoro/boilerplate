@@ -1,0 +1,53 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+    /* centering content */
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  .origin {
+    position: absolute;
+    background: white;
+    border: 4px dashed gray;
+  }
+
+  /* animations */
+  /*
+    rotate()
+    You guessed it, rotate() will rotate our elements.
+    We use deg units for rotation, but there's another handy unit called turn.
+    The unit represents how many turns the element should make and 1turn is equal to 360deg.
+  */
+  .animate {
+    transform: rotate(150deg);
+    background: #695cff;
+    opacity: 0.8;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="placeholder">
+      <div class="box origin"></div>
+      <div class="box animate"></div>
+    </div>
+  </div>
+</body>

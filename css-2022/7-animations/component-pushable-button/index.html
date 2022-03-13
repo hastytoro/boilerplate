@@ -1,0 +1,67 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .pushable-back {
+    background: hsl(340deg 100% 32%);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    /* default/exiting */
+    transform: translateY(-4px);
+    transition: transform 500ms;
+  }
+
+  /* entering */
+  /* different states */
+  .pushable-back:hover .front {
+    transform: translateY(-6px);
+  }
+  .pushable-back:active .front {
+    transform: translateY(-2px);
+  }
+  /*
+    The problem with this is that those different actions 'states' being :hover and :active will default to the only specified transition that animation is too slow when exiting.
+    Important: We overwrite our different transition requirements based on the different states.
+  */
+  /* different states */
+  .pushable-back:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms;
+  }
+  .pushable-back:active .front {
+    transform: translateY(-2px);
+    transition: transform 50ms;
+  }
+  /*
+    As the user (transitions) over the <span> :hover we want to overwrite the current transform defined in the default class declaration block, to be quicker at 250ms.
+    As you leave that element's :hover state the user will again (transition) back to the default transform, slowing falling back to normal.
+    Lastly when the user (transition) into the :active state for the element we have a quicker transform applied and when released, again the default slower animation is applied.
+    NOTE: keep in mind because both states we managing have the same specificity, the one applied last wins. So if we had to switch them the hovering action will be the only other state involved.
+  */
+</style>
+
+<body>
+  <button class="pushable-back">
+    <span class="front"> Push me </span>
+  </button>
+</body>

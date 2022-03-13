@@ -1,0 +1,55 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* flex configuration */
+  section {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; /* toggle to wrap flex items */
+  }
+
+  /* image settings */
+  img {
+    display: block;
+    width: 100%; /* this fills the inner (in-Flow) placeholder <div> */
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  /* Here we implement a placeholder. */
+  .placeholder {
+    min-width: 300px; /* constraint */
+    flex: 1; /* grow to fill the Flexbox child item */
+  }
+</style>
+
+<body>
+  <section>
+    <div class="placeholder">
+      <img
+        alt="A wide-open outdoor concrete area. Architecture"
+        src="/architecture-hugo-sousa.jpg"
+      />
+    </div>
+    <div class="placeholder">
+      <img
+        alt="A modular building against a blue sky. Architecture"
+        src="/architecture-joel-filipe.jpg"
+      />
+    </div>
+    <div class="placeholder">
+      <img
+        alt="A unique building with inset curves. Architecture"
+        src="/architecture-julien-moreau.jpg"
+      />
+    </div>
+  </section>
+</body>

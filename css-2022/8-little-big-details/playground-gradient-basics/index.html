@@ -1,0 +1,81 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    filter: drop-shadow(2px 4px 32px hsl(0deg 0% 0% / 0.4));
+  }
+  .box {
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    border: 2px solid black;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+  }
+  p {
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border-radius: 6px;
+  }
+
+  .box {
+    filter: drop-shadow(1px 2px 8px var(--shadow-color));
+  }
+  /* gradient basics */
+  .linear {
+    background-image: linear-gradient(deeppink, red, coral, gold, white);
+  }
+  .radial {
+    background-image: radial-gradient(deeppink, red, coral, gold, white);
+  }
+  .conic {
+    background-image: conic-gradient(deeppink, red, coral, gold, white);
+  }
+  .color-stops {
+    /* sharp color lines: */
+    background-image: linear-gradient(
+      90deg,
+      deeppink 0%,
+      deeppink 9.99%,
+      red 10%,
+      red 19.99%,
+      coral 20%,
+      coral 29.99%,
+      gold 30%,
+      gold 39.99%,
+      white 40%
+    );
+  }
+  .color-hints {
+    /* Normally, midpoint(s) are between two colors, halfway through the space between color-stops. */
+    /* Hints allow us to shift that midpoint. */
+    background-image: linear-gradient(deeppink, 85%, gold);
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <div class="box linear"><p>linear</p></div>
+    <div class="box radial"><p>radial</p></div>
+    <div class="box conic"><p>conic</p></div>
+    <div class="box color-stops"><p>color stops</p></div>
+    <div class="box color-hints"><p>color hints</p></div>
+  </section>
+</body>

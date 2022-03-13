@@ -1,0 +1,41 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  body {
+    display: grid;
+    place-content: center;
+    background: black;
+  }
+  img {
+    display: block;
+    width: 400px;
+    border-radius: 8px;
+  }
+
+  /* exiting/default */
+  img {
+    filter: blur(6px) brightness(50%);
+    transition: filter 800ms ease-out;
+  }
+  a:hover img,
+  a:focus img {
+    filter: blur(0px) brightness(100%);
+    transition: filter 350ms; /* entering */
+  }
+</style>
+
+<body>
+  <a href="/">
+    <img alt="Tokyo, Japan" src="/tokyo.jpg" />
+  </a>
+</body>

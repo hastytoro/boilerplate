@@ -1,0 +1,80 @@
+<style>
+  /* main background color: */
+  :root {
+    --darkest-background: hsl(230deg 40% 20%);
+    --dark-slop: hsl(230deg 40% 28%);
+    --darker-slop: hsl(230deg 40% 24%);
+  }
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* cosmetic style: */
+  /*
+    Lets make sure that the base background <div> is the darkest element.
+    This base canvas will be absolute positioned in all 4 possible edges of our application at the max width and height of the page.
+    Using our secondary selector(s) we layer additional colors to the already stretched background class.
+    
+    Select the linear-slops <div> and set background property to layer a linear-gradient().
+    We apply transparent 'syntactic sugar for opacity zero' the start 0% and middle 49.99 color-stops.
+    The remaining middle 50% and end 100% color-stops are var(--dark-slop), completing the full range.
+    When we angle gradients they move clockwise from top to bottom.
+  */
+  body {
+    background: var(--darkest-background);
+  }
+  .base-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .linear-slops {
+    background: linear-gradient(
+        calc(180deg - 20deg),
+        transparent 0%,
+        transparent 49.99%,
+        var(--dark-slop) 50%,
+        var(--dark-slop) 100%
+      ),
+      linear-gradient(
+        calc(180deg + 20deg),
+        transparent 0%,
+        transparent 49.99%,
+        var(--darker-slop) 50%,
+        var(--darker-slop) 100%
+      );
+  }
+  .radial-slops {
+    background: radial-gradient(
+        circle at 100% 120%,
+        var(--dark-slop) 0%,
+        var(--dark-slop) 49.99%,
+        transparent 50%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at 20% 100%,
+        var(--darker-slop) 0%,
+        var(--darker-slop) 49.99%,
+        transparent 50%,
+        transparent 100%
+      );
+  }
+</style>
+
+<body>
+  <!-- <div class="base-canvas linear-slops"></div> -->
+  <div class="base-canvas radial-slops"></div>
+</body>

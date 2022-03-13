@@ -1,0 +1,53 @@
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'SF Mono';
+  }
+  body {
+    margin: 0;
+    padding: 16px;
+    background: #6a5acd;
+  }
+  .wrapper {
+    max-width: 380px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 2px 20px hsl(0deg 0% 0% / 0.15);
+    overflow: hidden;
+  }
+  .card-body {
+    padding: 16px;
+  }
+  .actions {
+    background: hsl(0deg 0% 95%);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn {
+    padding: 16px 32px;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid hsl(0deg 0% 85%);
+    border-radius: 4px;
+  }
+  .btn:hover {
+    background: black;
+    color: white;
+  }
+</style>
+
+<body>
+  <body>
+    <div class="wrapper">
+      <div class="card-body">
+        <h2>Are you sure?</h2>
+        <p>This action cannot be undone.</p>
+      </div>
+      <div class="actions">
+        <button class="btn secondary">Cancel</button>
+        <button class="btn primary">OK</button>
+      </div>
+    </div>
+  </body>
+</body>

@@ -1,0 +1,98 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    height: 100%;
+  }
+  .placeholder {
+    /* centering content */
+    display: grid;
+    place-content: center;
+  }
+  .card {
+    position: relative;
+    border: 2px solid;
+    box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.4);
+    text-align: center;
+  }
+  img {
+    display: block;
+    width: 220px;
+  }
+  .card h2,
+  p {
+    margin: 10px 0px;
+  }
+
+  /* border and padding nesting - untidy :( */
+  .card.one {
+    border-radius: 16px;
+    padding: 8px;
+  }
+  .avatar.one {
+    border-radius: 16px;
+  }
+  /* ...tidy :) */
+  /*
+    Our corner would look more consistent if the two corners shared the same center point, like inner tree rings.
+    This way, the corners are the same thickness all the way through.
+    
+    How do we work out the outer radius?
+    Well it’s 24px as the inner radius is 16px and padding 8px. 
+
+    How do we work out the inner radius?
+    We can do the same calculation except we subtract the padding instead of adding it.
+  */
+  .card.two {
+    --outer-radius: 24px;
+    --padding: 8px;
+    border-radius: var(--outer-radius);
+    padding: var(--padding);
+  }
+  .avatar.two {
+    border-radius: calc(var(--outer-radius) - var(--padding));
+  }
+  .circle {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid red;
+    border-radius: 50%;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="placeholder">
+      <article class="card one">
+        <img class="avatar one" alt="" src="unsplash.avif" />
+        <h2>Pug</h2>
+        <p>What a good boy...</p>
+        <div class="circle"></div>
+      </article>
+    </div>
+    <div class="placeholder">
+      <article class="card two">
+        <img class="avatar two" alt="" src="unsplash.avif" />
+        <h2>Pug</h2>
+        <p>What a good boy...</p>
+        <div class="circle"></div>
+      </article>
+    </div>
+  </div>
+</body>

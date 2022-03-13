@@ -1,0 +1,93 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic styles */
+  .wrapper {
+    max-width: 64rem;
+    columns: 2;
+    column-gap: 100px;
+    padding: 50px;
+    background: linear-gradient(
+      to right,
+      hsl(35deg, 30%, 90%),
+      hsl(35deg, 30%, 90%) 47%,
+      hsl(35deg, 30%, 70%) 49.5%,
+      hsl(35deg, 20%, 50%) 50%,
+      hsl(35deg, 30%, 70%) 50.5%,
+      hsl(35deg, 30%, 90%) 53%,
+      hsl(35deg, 30%, 90%)
+    );
+    border: 2px solid hsl(35deg 10% 80%);
+  }
+  /* It’s common for text to be text-align: justify meaning its justified.
+  That the spacing between each word is tweaked so that each line fills available horizontal space. */
+  p {
+    /* toggle to see affect */
+    /* break-inside: avoid; */
+    text-align: justify;
+  }
+  p:first-of-type:first-letter {
+    font-size: 3em;
+    float: left;
+    line-height: 1em;
+    margin-right: 0.2em;
+  }
+  p::first-letter {
+    /* toggle to see affect */
+    /* margin-left: 2rem; */
+    /* font-weight: bold; */
+  }
+</style>
+
+<body>
+  <main class="wrapper">
+    <h2>Chapter 1</h2>
+    <h3>The Secret Agent</h3>
+    <p>
+      Bond watched the curious, impressive profile for a time, and then he
+      shrugged his shoulders to lighten his thoughts and moved away.
+    </p>
+    <p>
+      The barrier surrounding the caisse comes as high as your chin, and the
+      caissier, who is generally nothing more than a minor bank clerk, sits on a
+      stool and dips into his piles of notes and plaques. These are ranged on
+      shelves. They are on a level, behind the protecting barrier* with your
+      groin. The caissier has a cosh and a gun to protect him, and to heave over
+      the barrier and steal some notes and then vault back and get out of the
+      Casino through the passages and doors would be im- possible. And the
+      caissiers generally work in pairs.
+    </p>
+    <p>
+      Bond reflected on the problem as he collected the sheaf of
+      hundred-thousand and then the sheaves of ten- thousand-franc notes. With
+      another part of his mind, he had a vision of tomorrow's regular morning
+      meeting of the Casino committee.
+    </p>
+    <p>
+      'Monsieur Le Chiffre made two million. He played his usual game. Miss
+      Fairchild made a million an hour and then left. She executed\hree bancos
+      of Monsieur Le Chiffre within an hour and then left. She played with
+      coolness. Monsieur le Vicomte de Villorin made one million two at
+      roulette. He was playing the maximum on the first and last dozens. He was
+      lucky.
+    </p>
+    <p>
+      Then the Englishman, Mister Bond, increased his winnings to exactly three
+      million over the two days. He was playing a progressive system on red at
+      table five. Duclos, the chef de partie, has the details. It seems that he
+      is per- severing and pays in maximums. He has luck. His nerves seem good.
+      On the soiree, the chemin-de-fer won x, the baccarat won.y and the
+      roulette won z. The boule, which was again badly frequented, still makes
+      its ex- penses.'
+    </p>
+  </main>
+</body>

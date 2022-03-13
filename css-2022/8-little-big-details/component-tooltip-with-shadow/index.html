@@ -1,0 +1,56 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  body {
+    background: #cddaf3;
+  }
+  .tooltip {
+    position: relative;
+    background: white;
+    width: 160px;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: inherit;
+    width: 25px;
+    height: 25px;
+    transform: translateY(100%);
+    /* property cuts out the triangle shape. */
+    clip-path: polygon(100% 0%, 0% 100%, 0% 100%, 0% 0%);
+  }
+  /*
+    Here we demonstrate why box-shadow is the wrong shadowing property.
+    Below we have a protrusion from a parenting container using the ::after selector which inserts something after the content of each selected element(s).
+    You would expect the shadow styles to carry to that child pseudo element specified by the content property, but it does not.
+    NOTE: Use the ::before selector to insert something before the content.
+    
+    By drop-shadow() the styles apply to all elements including 'child' protruding the container bounds.
+  */
+  .tooltip {
+    filter: drop-shadow(0px 0px 16px hsl(0deg 0% 0% / 0.5));
+    /* toggle property */
+    /* box-shadow: 0px 0px 16px hsl(0deg 0% 0% / 0.5); */
+  }
+</style>
+
+<body>
+  <div class="tooltip">Lorem ipsum dolor hello</div>
+</body>

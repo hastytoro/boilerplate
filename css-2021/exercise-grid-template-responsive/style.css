@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 1rem;
+  background: rgb(232, 232, 232);
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  /* margin: 20px; */
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: [r-line-1] 5rem [r-line-2] 1fr [r-line-3] 5rem [r-line-4];
+  gap: 1rem;
+  grid-template-areas:
+    'header header header header'
+    'side main main main'
+    'footer footer footer footer'
+  ;
+  justify-content: center;
+}
+
+@media (max-width: 40rem) {
+  .container {
+    grid-template-rows: [r-line-1] 5rem [r-line-2] 2fr [r-line-3] 1fr [r-line-4] 5rem [r-line-5];
+    grid-template-areas:
+      'header header header header'
+      'main main main main'
+      'side side side side'
+      'footer footer footer footer'
+    ;
+  }
+}
+
+.el1 {
+  border: rgb(48, 192, 48) solid 0.5rem;
+  background-color: rgba(48, 192, 48, 0.5);
+  grid-area: header;
+}
+
+.el2 {
+  border: rgb(40, 40, 218) solid 0.5rem;
+  background-color: rgba(40, 40, 218, 0.5);
+  grid-area: side;
+}
+
+.el3 {
+  border: rgb(218, 40, 40) solid 0.5rem;
+  background-color: rgba(218, 40, 40, 0.5);
+  grid-area: main;
+}
+
+.el4 {
+  border: rgb(8, 8, 8) solid 0.5rem;
+  background-color: rgba(8, 8, 8, 0.5);
+  grid-area: footer;
+}
+
+
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: black;
+  box-shadow: rgba(3, 8, 20, 0.1);
+  /* height: 100%;
+  width: 100%; */
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1);
+  transform: translateY(-3px) scale(1.1);
+}

@@ -1,0 +1,51 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  nav {
+    width: 220px;
+  }
+  nav,
+  main {
+    padding: 16px;
+    border: 2px solid;
+  }
+  .wrapper {
+    display: flex;
+  }
+  /* A <main> content area with a <nav> navigation sidebar. Let’s prioritize the <main> content area by keeping it as large as possible once the viewport shrinks. */
+  main {
+    flex-grow: 1;
+  }
+  /* And the other behavior we after is when our <main> reaches its hypothetical size we want the sibling <nav> to start shrinking using flex-shrink. Technically speaking they both going to shrink but we want the <nav> to at a much higher accelerated rate that it appears that <main> is not shrinking. Add a width: 200px to the <nav> to expand/set the hypothetical size as it has small “text” contents.  */
+  nav {
+    flex-shrink: 1000000;
+    width: 200px;
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <nav>
+      <h2>Navigation</h2>
+      <ul>
+        <li>Home</li>
+        <li>Store</li>
+        <li>Contact</li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Welcome to Amazon</h1>
+      <p>Main content here!</p>
+    </main>
+  </section>
+</body>

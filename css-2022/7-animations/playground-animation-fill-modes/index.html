@@ -1,0 +1,128 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* cosmetic style: */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: 32px;
+  }
+  .placeholder {
+    background-color: #f0f0f0;
+    border: 1px solid #e9e9e9;
+    padding: 32px;
+    display: grid;
+    place-items: center;
+    gap: 16px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: rgba(105, 90, 205, 0.5);
+    border: 2px solid slateblue;
+    color: slateblue;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+  }
+  .card {
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.4);
+  }
+  p {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 2px solid;
+    background: slateblue;
+    color: white;
+  }
+
+  /* animations */
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  .box {
+    /* animation: fade-out 2000ms; */
+    animation: slide-in 2000ms;
+    animation-delay: 1000ms;
+
+    /* none	Default value. Animation will not apply any styles to the element before or after it is executing */
+    /* animation-fill-mode: none; */
+
+    /* forwards	The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count) */
+    /* animation-fill-mode: forwards; */
+
+    /* backwards	The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period */
+    /* animation-fill-mode: backwards; */
+
+    /* both	The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions */
+    animation-fill-mode: both;
+  }
+
+  /*   
+    What if we want to persist the animation forwards and backwards?
+    We can use a third value called both, which persists in both directions.
+    
+    Important: In general the initial 'from' value in a keyframe you would want applied during the delay.
+    And the final 'to' value to be kept applying after the animation ends.
+    
+    A good habit is to apply animation-fill-mode: both to your keyframe animations.
+    * It should be the default value.
+
+    Like all of the properties discussed it can be tossed into the animation shorthand.
+  */
+</style>
+
+<body>
+  <section class="grid">
+    <div class="placeholder">
+      <div class="box">Animation</div>
+    </div>
+
+    <div class="placeholder">
+      <div class="card">
+        <p>forwards</p>
+        <img src="forwards.png" alt="" />
+      </div>
+      <div class="card">
+        <p>backwards</p>
+        <img src="backwards.png" alt="" />
+      </div>
+      <div class="card">
+        <p>both</p>
+        <img src="both.png" alt="" />
+      </div>
+    </div>
+  </section>
+</body>

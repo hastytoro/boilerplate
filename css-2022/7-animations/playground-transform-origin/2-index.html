@@ -1,0 +1,57 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+    /* centering content */
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  .origin {
+    position: absolute;
+    background: white;
+    border: 4px dashed gray;
+  }
+
+  /* animations */
+  /*
+    Transform origin
+    Every element has an origin, the anchor that the transform functions execute from.
+    Check out how rotation changes when we tweak the transform origin:
+    The transform origin acts as a pivot point!
+
+    It isn't exclusive to rotation, either; here's how it affects scale:
+  */
+  .animate {
+    transform: scale(1.5);
+    transform-origin: center; /* default */
+    transform-origin: bottom right;
+    background: #695cff;
+    opacity: 0.8;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="placeholder">
+      <div class="box origin"></div>
+      <div class="box animate"></div>
+    </div>
+  </div>
+</body>

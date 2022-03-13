@@ -1,0 +1,44 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+    /* background: black; */
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      'sidebar navbar'
+      'sidebar main-content';
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr;
+    gap: 4px;
+    min-height: 100%;
+  }
+  aside {
+    grid-area: sidebar;
+  }
+  header {
+    grid-area: navbar;
+  }
+  main {
+    grid-area: main-content;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <aside style="background-color: lightblue">sidebar</aside>
+    <header style="background-color: lightcoral">navbar</header>
+    <main style="background-color: lightgreen">main-content</main>
+  </div>
+</body>

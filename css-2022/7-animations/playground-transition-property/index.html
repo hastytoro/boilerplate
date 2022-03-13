@@ -1,0 +1,44 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .wrapper {
+    display: grid;
+    place-content: center;
+    min-height: 100%;
+  }
+
+  button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background: slateblue;
+  }
+  /* with transition :) */
+  .action {
+    transition: transform 650ms, opacity 400ms;
+  }
+  .action:hover {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <button class="action">Hello World</button>
+  </div>
+</body>

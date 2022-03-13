@@ -1,0 +1,108 @@
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+  }
+  /* css reset */
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: rgb(13, 4, 31);
+  }
+
+  /* decorative styling  */
+  .reviews {
+    text-align: center;
+    min-width: 300px;
+  }
+  .average-rating {
+    font-size: 1.25rem;
+    margin-top: 32px;
+    color: gold;
+    font-style: italic;
+  }
+
+  /* image settings */
+  /* Warning: We solve <img> conflicts with Flexbox principles but you can sidestep those issues all together. */
+  img {
+    width: 100%;
+    min-width: 0px;
+    object-fit: contain;
+    object-position: -32px 0;
+    filter: drop-shadow(-8px 32px 10px hsl(260deg 50% 4% / 0.5));
+  }
+
+  /* flex configuration */
+  .wrapper {
+    display: flex;
+    gap: 32px 0;
+    flex-wrap: wrap;
+  }
+
+  img,
+  .reviews {
+    flex: 1;
+    align-self: flex-start;
+  }
+</style>
+<body>
+  <main class="wrapper">
+    <img alt="" class="book-img" src="whispering-owl.png" />
+    <div class="reviews">
+      <blockquote class="review">
+        A magnificent story about a majestic creature.
+        <footer>
+          <cite class="author">KitKat99</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        From the first flap of the wings, it was clear that this book would soar
+        above my expectations. Just terrific.
+        <footer>
+          <cite class="author">TheEagle</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        Some have said that it is a real book, but I see no evidence of that.
+        <footer>
+          <cite class="author">Skeptic1977</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        If you only read one book about an owl this month, this should be the
+        one.
+        <footer>
+          <cite class="author">knuckles</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        A magnificent story about a boy and an owl!
+        <footer>
+          <cite class="author">KitKat99</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        A magnificent story about a boy and an owl!
+        <footer>
+          <cite class="author">KitKat99</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="review">
+        A magnificent story about a boy and an owl!
+        <footer>
+          <cite class="author">KitKat99</cite>
+        </footer>
+      </blockquote>
+      <div class="average-rating">
+        ★★★★☆
+        <br />
+        Average Amazon Rating
+      </div>
+    </div>
+  </main>
+</body>

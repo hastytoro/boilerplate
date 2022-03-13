@@ -1,0 +1,55 @@
+<style>
+  /* application colors: */
+  :root {
+    --gold-dark: hsl(34deg 90% 45%);
+    --gold-background: hsl(44deg 80% 70%);
+    --gold-light: hsl(44deg 100% 85%);
+  }
+
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* cosmetic style: */
+  .wrapper {
+    position: relative;
+    height: 400px;
+    max-width: 550px;
+    margin: auto;
+    background-color: var(--gold-background);
+    border-radius: 5000px 5000px 500px 500px;
+    /* centering and scaling content */
+    display: flex;
+    justify-content: center;
+  }
+  .trophy {
+    transform: scale(1.4) translateY(16px);
+    transform-origin: bottom;
+  }
+
+  /* gradient */
+  .wrapper {
+    background-image: conic-gradient(
+      from 90deg at 50% 100%,
+      var(--gold-dark) 50%,
+      transparent,
+      var(--gold-light),
+      transparent,
+      var(--gold-dark)
+    );
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <img class="trophy" alt="" src="gold-trophy.png" />
+  </div>
+</body>

@@ -1,0 +1,88 @@
+<style>
+  /* application colors: */
+
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* cosmetic style: */
+  .wrapper {
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    filter: drop-shadow(2px 4px 32px hsla(0, 0%, 0%, 0.5));
+  }
+  .placeholder {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  p {
+    position: absolute;
+    top: -20px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 6px;
+  }
+
+  /* clipping and animation   */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* exit/default animation */
+    clip-path: circle(80px at 100px 100px);
+    transition: clip-path 450ms;
+    will-change: transform;
+  }
+  /*
+    The polygon() function is great for cutting a shape out of straight lines, but what if we want a rounded shape? clip-path supports both a circle function and an ellipse function:
+    This effectively makes it like a super-charged border-radius. We can choose exactly which part of the element we want to crop. We can create funky off-center cuts.
+    We can also animate circular clip-path! Try focusing or hovering over the image below.
+  */
+
+  /* entering animation */
+  .placeholder.one:hover img {
+    clip-path: circle(100px at 100% 50%);
+    transition: clip-path 250ms;
+    will-change: transform;
+  }
+  .placeholder.two:hover img {
+    clip-path: circle(100px at 50% 50%);
+    transition: clip-path 250ms;
+    will-change: transform;
+  }
+  .placeholder.three:hover img {
+    clip-path: circle(100px at 50% 150%);
+    transition: clip-path 500ms;
+    will-change: transform;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="placeholder one">
+      <p>slide right</p>
+      <img src="/architecture-joel-filipe.jpg" />
+    </div>
+    <div class="placeholder two">
+      <p>profile expand</p>
+      <img src="/architecture-joel-filipe.jpg" />
+    </div>
+    <div class="placeholder three">
+      <p>disappear y-axis</p>
+      <img src="/architecture-joel-filipe.jpg" />
+    </div>
+  </div>
+</body>

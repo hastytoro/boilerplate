@@ -1,0 +1,81 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    padding: 32px;
+    height: 100%;
+    display: grid;
+    place-content: center;
+  }
+  p {
+    padding: 16px 0px;
+  }
+  .box {
+    margin-bottom: 16px;
+    width: 300px;
+    height: 150px;
+    background: white;
+    text-align: center;
+    border: 2px solid hsl(328, 100%, 54%);
+    box-shadow: 0px 2px 24px hsl(328deg 100% 54% / 0.4);
+    /* centering text content */
+    display: grid;
+    place-content: center;
+  }
+  /* exiting/default animation */
+  .box {
+    transition: transform 150ms ease-in-out;
+  }
+  /* entering */
+  .box:hover {
+    transform: scale(1.25);
+    transition: transform 1s ease-in-out;
+  }
+
+  /* border-radius */
+  .examples {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .one {
+    border-top-left-radius: 40px 20px;
+  }
+  .two {
+    border-radius: 32px;
+  }
+  .three {
+    border-top-left-radius: 25%;
+  }
+  .four {
+    border-radius: 50%;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <h2>Border Radius</h2>
+    <p class="intro">
+      The border-radius property is actually a shorthand for 4 distinct
+      properties. Each of these properties accepts two values, horizontal
+      radius, and the vertical radius.
+    </p>
+    <div class="examples">
+      <article class="box one">border-top-left-radius: 40px 20px</article>
+      <article class="box two">border-radius: 32px</article>
+      <article class="box three">border-top-left-radius: 25%</article>
+      <article class="box four">border-radius: 50%</article>
+    </div>
+  </div>
+</body>

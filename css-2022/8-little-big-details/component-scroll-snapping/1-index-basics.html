@@ -1,0 +1,74 @@
+<style>
+  /* css reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /*
+    First lets create a Flexbox parent <div> container with overflow: auto.
+    Stuffed with full width elements that being min-width: 100%.
+
+    Fortunately these days we can do this in a couple properties!
+    With scroll-snap-type goes on the parent and we control which axis snap to.
+    Also we need to give it 'precision' either mandatory or proximity.
+
+    - Using mandatory means that the element will always snap, no matter what.
+    - And proximity tends to be more subtle as it only triggers a snap when the user is near a snapping point.
+  */
+  .wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    /* parent configuration here! */
+    scroll-snap-type: x mandatory;
+  }
+  /*
+    The second property is scroll-snap-align lets us set the snap point for children items.
+    In this case, we chose to start, we want the left edge of the child to snap to the left edge of the container.
+    In other situations, we may wish to snap to the center of the element.
+    Each element has a snap point in the very middle, and that anchor snaps to the center of the parent container.
+    Compare this with start where that anchor position is rather on the left edge of the child element, snapping to the left edge of the container.
+  */
+  .box {
+    min-width: 100%;
+    /* just centering text content */
+    display: grid;
+    place-content: center;
+    /* child configuration here! */
+    scroll-snap-align: center;
+  }
+
+  /* ...just cosmetic style: */
+  .box.one {
+    background-color: peachpuff;
+  }
+  .box.two {
+    background-color: lavender;
+  }
+  .box.three {
+    background-color: lightblue;
+  }
+  .box.four {
+    background-color: hotpink;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="box one">First Box</div>
+    <div class="box two">Second Box</div>
+    <div class="box three">Third Box</div>
+    <div class="box four">Fourth Box</div>
+  </div>
+</body>

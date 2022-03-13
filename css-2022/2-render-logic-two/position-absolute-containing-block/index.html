@@ -1,0 +1,36 @@
+<html>
+  <style>
+    /* css reset */
+    * {
+      box-sizing: border-box;
+      font-family: 'Wotfard';
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      height: 100%;
+    }
+
+    .parent {
+      width: 200px;
+      height: 150px;
+      border: 5px solid;
+    }
+    .absolute {
+      background: deeppink;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      Normal flow container
+      <div class="absolute"></div>
+    </div>
+  </body>
+</html>

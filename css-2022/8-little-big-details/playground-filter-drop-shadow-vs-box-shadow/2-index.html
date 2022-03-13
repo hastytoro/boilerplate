@@ -1,0 +1,51 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #cddaf3;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    width: 100%;
+  }
+  .item {
+    min-height: 150px;
+    background-color: white;
+    border-radius: 4px;
+    /* toggle to compare */
+    /* box-shadow: 2px 4px 32px hsl(0deg 0% 0% / 0.4); */
+  }
+  /* apply the shadow to the grid parent, not the individual grid elements */
+  .grid {
+    filter: drop-shadow(2px 4px 32px hsl(0deg 0% 0% / 0.4));
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <main class="grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </main>
+  </div>
+</body>

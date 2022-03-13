@@ -1,0 +1,48 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background: #f1cffc;
+    height: 100%;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 8px;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+
+  .traditional {
+    box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  }
+  .layered {
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <div class="traditional box">normal</div>
+    <div class="layered box">layer</div>
+  </section>
+</body>

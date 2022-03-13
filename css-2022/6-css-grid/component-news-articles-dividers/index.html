@@ -1,0 +1,89 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  article {
+    padding: 24px;
+    background: white;
+  }
+  h2 {
+    margin-top: 10px;
+  }
+  /* grid configuration: */
+  .wrapper {
+    display: grid;
+    gap: 2px;
+    padding: 2px;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid hotpink;
+  }
+  .feature {
+    grid-column: 1 / -1;
+    border-bottom: 2px solid hotpink;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  /* The selector :nth-of-type(2n) selects the 2nd child grid child <article>. */
+  article:nth-last-of-type(2n) {
+    border-right: 2px solid hotpink;
+    padding-right: 24px;
+  }
+  /* The 2n + 3 offset ensures that instead of counting every other child from the very beginning.
+  We start counting every other child from the 3rd item onwards. */
+  article:nth-last-of-type(2n + 1) {
+    /* border-left: 2px solid hotpink; */
+    padding-left: 24px;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <article class="feature">
+      <img src="/meerkat.jpg" alt="" />
+      <h2>Feature: Heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </article>
+    <article>
+      <img src="/night-sky.jpg" alt="" />
+      <h2>Heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt nunc
+        pulvinar sapien et ligula ullamcorper malesuada. Tellus in metus
+        vulputate eu scelerisque.
+      </p>
+    </article>
+    <article>
+      <img src="/wall-art.jpg" alt="" />
+      <h2>Heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Lacus luctus
+        accumsan tortor posuere ac ut consequat. Nibh tortor id aliquet lectus
+        proin nibh. Sagittis vitae et leo duis ut diam quam. Consectetur libero
+        id faucibus nisl tincidunt eget. Parturient montes nascetur ridiculus
+        mus mauris vitae ultricies leo integer.
+      </p>
+    </article>
+  </div>
+</body>

@@ -1,0 +1,89 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+    font-size: 14px;
+    /* background: black; */
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* These styles are purely presentational,
+to make your grid children */
+  header,
+  nav,
+  aside,
+  main,
+  footer {
+    border: 3px solid;
+    padding: 16px;
+  }
+  header {
+    border-color: hsl(45deg 100% 50%);
+    background-color: hsl(45deg 100% 50% / 0.2);
+  }
+  nav {
+    border-color: hsl(170deg 100% 35%);
+    background-color: hsl(170deg 100% 35% / 0.2);
+  }
+  main {
+    border-color: hsl(220deg 100% 50%);
+    background-color: hsl(220deg 100% 50% / 0.2);
+  }
+  aside {
+    border-color: hsl(300deg 100% 45%);
+    background-color: hsl(300deg 100% 45% / 0.2);
+  }
+  footer {
+    border-color: hsl(350deg 100% 60%);
+    background-color: hsl(350deg 100% 60% / 0.2);
+  }
+
+  /* grid configuration */
+  /*
+    One of the main use cases for grid layout mode is to create full-page layouts.
+    Let's create the most famous full-page layout of x3 columns and x2 rows!
+    The fr units in the grid-template and min-height properties ensures we fill all available space.
+  */
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      'header header header'
+      'navbar main-content adverts'
+      'footer footer footer';
+    grid-template-columns: 12rem 1fr 8rem;
+    grid-template-rows: 4rem 1fr 6rem;
+    gap: 4px;
+    min-height: 100%;
+  }
+  header {
+    grid-area: header;
+  }
+  nav {
+    grid-area: navbar;
+  }
+  main {
+    grid-area: main-content;
+  }
+  aside {
+    grid-area: adverts;
+  }
+  footer {
+    grid-area: footer;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <header>header</header>
+    <nav>navbar</nav>
+    <main>main-content</main>
+    <aside>adverts</aside>
+    <footer>footer</footer>
+  </div>
+</body>

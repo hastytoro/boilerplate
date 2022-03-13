@@ -1,0 +1,88 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .wrapper {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    filter: drop-shadow(2px 4px 32px hsl(0deg 0% 0% / 0.4));
+  }
+  img {
+    width: 400px;
+    height: 300px;
+    border-radius: 6px;
+    object-fit: cover;
+    /* centering text content */
+    display: grid;
+    place-content: center;
+  }
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+  }
+  /*
+    Lets move the <figcaption> using the seen absolute positioning layout.
+    Again to ensure the right element is its ancestor and serving containing block, remember to assign relative to the parent.
+    Now are <figcaption> is going to be absolutely positioned to the relative wrapping <figure> element's bottom / left / right edges.
+    The <figcaption> is following DOM order and overlaying 50% the height of its containing element.
+    Our wrapping parent width is set to mincontent so that it’s as small as possible, depending on its content.
+  */
+  figcaption {
+    /* Simulated "ease-in-out": */
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.011) 10.8%,
+      hsla(0, 0%, 0%, 0.041) 20.6%,
+      hsla(0, 0%, 0%, 0.088) 29.5%,
+      hsla(0, 0%, 0%, 0.149) 37.5%,
+      hsla(0, 0%, 0%, 0.22) 44.8%,
+      hsla(0, 0%, 0%, 0.299) 51.5%,
+      hsla(0, 0%, 0%, 0.383) 57.6%,
+      hsla(0, 0%, 0%, 0.467) 63.3%,
+      hsla(0, 0%, 0%, 0.551) 68.7%,
+      hsla(0, 0%, 0%, 0.63) 73.9%,
+      hsla(0, 0%, 0%, 0.701) 78.9%,
+      hsla(0, 0%, 0%, 0.762) 83.9%,
+      hsla(0, 0%, 0%, 0.809) 89.1%,
+      hsla(0, 0%, 0%, 0.839) 94.4%,
+      hsla(0, 0%, 0%, 0.85) 100%
+    );
+    /* positioning text content */
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    padding: 24px;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+  <div class="grid">
+    <figure class="wrapper">
+      <img alt="" src="upside-down-dogs.jpg" />
+      <figcaption>"Who Let The Dogs Out"</figcaption>
+    </figure>
+  </div>
+</body>

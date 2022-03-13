@@ -1,0 +1,71 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* cosmetic style: */
+  body {
+    display: grid;
+    place-content: center;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: slateblue;
+  }
+
+  /* animations */
+  /*
+    Let's suppose that we want an element to animate a "breathing" effect, inflating and deflating.
+    We could set it up as a 3-step animation.
+  */
+  @keyframes breath-v1 {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /* Or ... */
+  @keyframes breath-v2 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  .box {
+    animation: breath-v2 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+
+  /*   
+    Above we spend the first half of the duration growing to be 1.5x with scale() from its default size.
+    Once it reaches that peak, it spends the second half shrinking back down to 1x.
+    There is a more-elegant way to accomplish the same effect using the animation-direction property. 
+    We can control the order of the @keyframes.
+    The default value is the normal direction, from your '0%' and to your '100%' over the specified duration.
+    
+    We can also reverse that will play the animation backwards, going from 100% to 0%.
+    Another interesting one is alternate as it ping-pongs between normal and reverse on subsequent iterations.
+  */
+</style>
+
+<body>
+  <div class="box"></div>
+</body>

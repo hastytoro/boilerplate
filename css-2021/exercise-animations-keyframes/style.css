@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  background: black;
+}
+
+p {
+  background: none;
+  position: relative;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.container {
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div {
+  width: 150px;
+  height: 150px;
+}
+
+.container div p {
+  margin: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+
+
+.grid-item:nth-child(1) {
+  background: rgb(255, 20, 147, 0.5);
+  border: 5px deeppink solid;
+  border-radius: 50%;
+  transition: all 2s ease;
+}
+
+.grid-item:nth-child(1):hover {
+  height: 200px;
+  width: 200px;
+  background: rgb(220, 20, 60, 0.50);
+  border: 5px crimson solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.grid-item:nth-child(2) {
+  background: rgb(0, 139, 139, 0.5);
+  border: 5px darkcyan solid;
+  border-radius: 50%;
+  transition: all 2s linear;
+}
+
+.grid-item:nth-child(2):hover {
+  height: 200px;
+  width: 200px;
+  background: rgb(65, 105, 225, 0.5);
+  border: 5px cornflowerblue solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.grid-item:nth-child(3) {
+  background: rgba(255, 140, 0, 0.5);
+  border: 5px darkorange solid;
+  border-radius: 50%;
+  transition: all 2s ease-in;
+}
+
+.grid-item:nth-child(3):hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(210, 105, 30, 0.50);
+  border: 5px chocolate solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.grid-item:nth-child(4) {
+  background: rgba(34, 139, 34, 0.5);
+  border: 5px forestgreen solid;
+  border-radius: 50%;
+  transition: all 2s ease-out;
+}
+
+.grid-item:nth-child(4):hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(152, 161, 152, 0.5);
+  border: 5px lightgreen solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.grid-item:nth-child(5) {
+  background: rgba(153, 50, 204, 0.50);
+  border: 5px darkorchid solid;
+  border-radius: 50%;
+  transition: all 2s ease-in-out;
+}
+
+.grid-item:nth-child(5):hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(75, 0, 130, 0.5);
+  border: 5px indigo solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.grid-item:nth-child(6) {
+  background: rgb(20, 115, 230, 0.50);
+  border: 5px rgb(20, 115, 230) solid;
+  border-radius: 50%;
+  transition: all 2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.grid-item:nth-child(6):hover {
+  height: 200px;
+  width: 200px;
+  background: rgba(70, 130, 180, 0.5);
+  border: 5px steelblue solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    height: 200px;
+    width: 200px;
+    background: rgb(227, 230, 20, 0.50);
+    border: 5px rgb(227, 230, 20) solid;
+    border-radius: 50%;
+    transform: rotateZ(20deg);
+  }
+}
+
+.grid-item:nth-child(7) {
+  background: rgb(167, 230, 20, 0.50);
+  border: 5px rgb(167, 230, 20) solid;
+  border-radius: 6px;
+  animation-name: wiggle;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(-10deg);
+  }
+
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes flipper {
+  0% {
+    transform: rotateX(0deg)
+  }
+
+  25% {
+    transform: rotateX(90deg)
+  }
+
+  50% {
+    transform: rotateX(180deg)
+  }
+
+  75% {
+    transform: rotateX(270deg)
+  }
+
+  100% {
+    transform: rotateX(360deg)
+  }
+}
+
+.grid-item:nth-child(8) {
+  width: 150px;
+  height: 150px;
+  background: rgba(20, 216, 230, 0.5);
+  border: 5px rgb(20, 216, 230) solid;
+  border-radius: 6px;
+  /* animation: swing 2s infinite alternate; */
+  animation: flipper 4s linear forwards;
+}

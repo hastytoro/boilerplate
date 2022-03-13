@@ -1,0 +1,38 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic style: */
+  .box {
+    margin: 10px 0;
+    border: 2px solid rgba(255, 20, 145, 0.5);
+  }
+  /*
+  Filtering allows us to leverage the ridiculous power of svg filters from within css.
+  Not familiar with svg? it's an image file format that allows us to create vector graphics using an HTML-like syntax.
+  The things that make svg powerful is that they have a rich API's.
+  But they tend to be wildly complex and inscrutable syntax. Fortunately CSS has an easier interface by using filter functions.
+  */
+  .shadow {
+    filter: drop-shadow(4px 8px 5px hsl(0deg 0% 0% / 0.2));
+  }
+</style>
+
+<body>
+  Without filter effect
+  <div class="box">
+    <img src="art.svg" alt="" />
+  </div>
+  With filter drop-shadow
+  <div class="box shadow">
+    <img src="art.svg" alt="" />
+  </div>
+</body>

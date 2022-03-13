@@ -1,0 +1,46 @@
+<style>
+  /* These styles are purely cosmetic */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    background-color: #fcf5f3;
+  }
+  body {
+    padding: 64px;
+    max-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+  img {
+    background: transparent;
+    width: 120px;
+  }
+  .card {
+    min-height: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 1px 20px hsl(0deg 0% 0% / 0.2);
+    padding: 16px 24px;
+  }
+  /* controlling position: */
+  .wrapper {
+    position: relative;
+  }
+  .card {
+    position: relative;
+    z-index: 1;
+  }
+  img {
+    position: absolute;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="card">Card content</div>
+
+    <img alt="" src="blob-1.svg" style="top: -20px; left: -70px" />
+    <img alt="" src="blob-2.svg" style="top: -50px; left: -10px" />
+    <img alt="" src="blob-3.svg" style="bottom: -80px; right: -50px" />
+    <img alt="" src="blob-4.svg" style="bottom: 50px; right: -120px" />
+  </div>
+</body>

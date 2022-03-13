@@ -1,0 +1,91 @@
+<style>
+  /* application colors: */
+
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* cosmetic style: */
+  /* for transparent background */
+  .wrapper {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    filter: drop-shadow(2px 4px 32px hsl(328deg 100% 54% / 0.5));
+  }
+
+  .triangle {
+    display: inline-block;
+    margin: 16px;
+    width: 100px;
+    height: 100px;
+    background: hsl(328, 100%, 54%);
+
+    /* exiting/default animation */
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    transition: clip-path 250ms;
+    will-change: transform;
+  }
+  .box {
+    display: inline-block;
+    margin: 16px;
+    width: 100px;
+    height: 100px;
+    background: hsl(328, 100%, 54%);
+
+    /* exiting/default animation */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path 250ms;
+    will-change: transform;
+  }
+
+  /* enter animation */
+  .wrapper:hover .side,
+  .wrapper:focus .side {
+    clip-path: polygon(0% 50%, 100% 0%, 50% 100%);
+  }
+  .wrapper:hover .spin,
+  .wrapper:focus .spin {
+    clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+  }
+  .wrapper:hover .down,
+  .wrapper:focus .down {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  }
+
+  /* enter animation */
+  .wrapper:hover .box.side,
+  .wrapper:focus .box.side {
+    clip-path: polygon(0 50%, 100% 0, 50% 100%, 35% 65%);
+  }
+  .wrapper:hover .box.twist,
+  .wrapper:focus .box.twist {
+    clip-path: polygon(100% 0, 0 0, 100% 100%, 0 100%);
+  }
+  .wrapper:hover .box.down,
+  .wrapper:focus .box.down {
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+  }
+</style>
+
+<body>
+  <button class="wrapper">
+    <span class="triangle side"></span>
+    <span class="triangle spin"></span>
+    <span class="triangle down"></span>
+    <span class="box side"></span>
+    <span class="box twist"></span>
+    <span class="box down"></span>
+  </button>
+</body>

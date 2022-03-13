@@ -1,0 +1,82 @@
+<style>
+  /* application colors: */
+
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* cosmetic style: */
+  body {
+    padding: 32px;
+  }
+  /* flex configuration */
+  .wrapper {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    filter: drop-shadow(2px 4px 32px hsla(0, 0%, 0%, 0.3));
+  }
+  .placeholder {
+    flex: 1 1 250px; /* grow to fill the Flexbox child item */
+    position: relative;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden; /* hide the overflowing shadow */
+  }
+
+  /* image configuration */
+  img {
+    display: block;
+    width: 100%; /* this fills the inner (in-Flow) box <div> */
+    padding: 26px;
+    aspect-ratio: 2 / 1;
+    object-fit: contain;
+  }
+
+  /* animation */
+  @keyframes unrolling {
+    from {
+      transform: translateY(-20px);
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0);
+    }
+    to {
+      transform: translateY(0);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  .highlighted {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: hsl(50deg 100% 70%);
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0 0 0 4px;
+    animation: unrolling 2s alternate infinite;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <article class="placeholder">
+      <img src="keyboard1.jpeg" alt="" />
+      <p class="highlighted">World's Best Keyboard</p>
+    </article>
+    <article class="placeholder">
+      <img src="keyboard2.jpeg" alt="" />
+    </article>
+    <article class="placeholder">
+      <img src="keyboard3.jpeg" alt="" />
+    </article>
+  </div>
+</body>

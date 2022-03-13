@@ -1,0 +1,141 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    background: #2c293d;
+  }
+  ul,
+  li {
+    /* list-style: none; */
+    margin: 0;
+    padding: 0;
+  }
+  /* just centering container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  /* cosmetic styles */
+  .wrapper {
+    width: 100%;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+  }
+  .description {
+    padding: 5px 16px 8px 8px;
+  }
+  .bibliography {
+    background: hsl(250deg 20% 90%);
+    padding: 8px;
+    padding-left: 32px;
+    border-radius: 0 4px 4px 0;
+  }
+  .bibliography li {
+    margin-bottom: 8px;
+  }
+  .bibliography a {
+    color: hsl(250deg 100% 50%);
+    text-decoration: none;
+  }
+
+  /* responsive conditions (jumpy) */
+  /* .wrapper {
+    display: flex;
+  }
+  .description {
+    flex: 1;
+  }
+  .bibliography {
+    flex: 1;
+  }
+  @media (max-width: 600px) {
+    .wrapper {
+      flex-direction: column;
+    }
+    .bibliography {
+      border-radius: 0 0 4px 4px;
+    }
+  } */
+
+  /* fluid calculation (smooth) */
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .description {
+    flex: 1;
+    min-width: 240px;
+  }
+  .bibliography {
+    flex: 1;
+    min-width: 320px;
+  }
+</style>
+
+<body class="container">
+  <div class="wrapper">
+    <div class="description">
+      <h2>Becky Chambers</h2>
+      <p>
+        Becky Chambers is an American science fiction writer, and the author of
+        the Hugo-award winning Wayfarers series. She is known for her
+        imaginative world-building and character-driven stories.
+      </p>
+    </div>
+    <nav class="bibliography">
+      <ul>
+        <li>
+          <a href="/"> A Psalm For The Wild-Built </a>
+        </li>
+        <li>
+          <a href="/"> The Galaxy, And The Ground Within </a>
+        </li>
+        <li>
+          <a href="/"> To Be Taught, If Fortunate </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrapper">
+    <div class="description">
+      <h2>John Scalzi</h2>
+      <p>
+        John Michael Scalzi II is an American science fiction author and former
+        president of the Science Fiction and Fantasy Writers of America. He is
+        best known for his Old Man's War series, three novels of which have been
+        nominated for the Hugo Award.
+      </p>
+    </div>
+    <nav class="bibliography">
+      <ul>
+        <li>
+          <a href="/"> Old Man's War </a>
+        </li>
+        <li>
+          <a href="/"> Questions For A Soldier </a>
+        </li>
+        <li>
+          <a href="/"> The Ghost Brigades </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>

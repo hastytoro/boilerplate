@@ -1,0 +1,67 @@
+<style>
+  :root {
+    --blue: hsl(250deg 100% 55%);
+    --yellow: hsl(50deg 100% 50%);
+    --red: hsl(350deg 100% 45%);
+    --white: hsl(0deg 0% 100%);
+    background: hsl(0deg 0% 2%);
+  }
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 2px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  /* general styling: */
+  .item,
+  .box {
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* grid configuration */
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 200px 1fr;
+    gap: 28px 16px;
+    min-height: 100%;
+  }
+  /* styling grid items */
+  .blue-box {
+    background: var(--blue);
+  }
+  .yellow-box {
+    background: var(--yellow);
+  }
+  .red-box {
+    background: var(--red);
+  }
+  .white-box {
+    background: var(--white);
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px 16px;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="blue-box"></div>
+    <header class="yellow-box"><h1>Mondrian</h1></header>
+    <div class="red-box"></div>
+    <main class="white-box"></main>
+  </div>
+</body>

@@ -1,0 +1,56 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* decorative styling */
+  .spinner {
+    /* centering content in-Flow layout*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  /* animations */
+  /*
+    We can replace the use of from and to keywords with percentages allowing more steps.
+    Meaning from is just syntactic sugar for 0% and to relates to 100%.
+    The percentage(s) collectively iterate through the animation.
+    We can play with the iteration-count amount to either a number of times or infinite.
+  */
+  @keyframes fancy-spin {
+    0% {
+      transform: rotate(0turn) scale(1);
+    }
+    25% {
+      transform: rotate(1turn) scale(1);
+    }
+    50% {
+      transform: rotate(1turn) scale(1.5);
+    }
+    75% {
+      transform: rotate(0turn) scale(1.5);
+    }
+    100% {
+      transform: rotate(0turn) scale(1);
+    }
+  }
+  .spinner {
+    animation: fancy-spin 2000ms;
+    animation-iteration-count: infinite;
+  }
+</style>
+
+<body>
+  <img class="spinner" src="/spinner.svg" />
+</body>

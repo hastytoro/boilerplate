@@ -1,0 +1,71 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* default light mode with variables */
+  :root {
+    --background: hsl(250deg 10% 90%);
+    --color-text: hsl(250deg 20% 20%);
+    --color-primary: hsl(250deg 100% 50%);
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* cosmetic styles */
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0px;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--color-text);
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  /* dark mode with variables */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: hsl(250deg 10% 10%);
+      --color-text: hsl(250deg 28% 80%);
+      --color-primary: hsl(250deg 100% 75%);
+    }
+  }
+</style>
+
+<body>
+  <main>
+    <h1>Artificial Plants</h1>
+    <p>
+      Artificial plants and flowers bring the vibrance of plants without the
+      work. Shop many varieties and types:
+    </p>
+    <nav>
+      <ul>
+        <li>
+          <a href="/large">- Large plants</a>
+        </li>
+        <li>
+          <a href="/bouq">- Bouquets</a>
+        </li>
+        <li>
+          <a href="/vines">- Vines</a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+</body>

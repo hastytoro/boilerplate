@@ -1,0 +1,50 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 6px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  /* By default a background image will be tiled (side-by-side) top-to-bottom. 
+  For most cases this is fine. But it does mean that the pattern will be truncated at the bottom and on the right. */
+  .demo {
+    border: 2px solid hsl(220deg 100% 30%);
+    border-radius: 6px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 200px;
+    /* background configuration */
+    background-color: hsl(220deg 100% 50%);
+    background-image: url('circle.svg');
+    background-size: 75px 75px;
+  }
+  /* The background-repeat property allows us to tweak this algorithm. */
+  .demo {
+    background-repeat: repeat; /* default */
+  }
+  /* round will scale the image up or down, to avoid having the image cut off at the bottom or the right. */
+  /* It will preserve the aspect ratio. */
+  .round {
+    background-repeat: round;
+  }
+  /* space won't tweak the size of the image. Instead, it'll leave gaps between the images. */
+  .space {
+    background-repeat: space;
+  }
+</style>
+
+<body>
+  <h3>background-repeat: repeat (default)</h3>
+  <div class="demo"></div>
+
+  <h3>background-repeat: round</h3>
+  <div class="demo round"></div>
+
+  <h3>background-repeat: space</h3>
+  <div class="demo space"></div>
+</body>

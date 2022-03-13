@@ -1,0 +1,46 @@
+<style>
+  /* css reset */
+  * {
+    box-sizing: border-box;
+    font-family: 'Wotfard';
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* flex configuration */
+  main {
+    display: flex;
+    gap: 8px;
+  }
+
+  picture {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid;
+  }
+
+  picture img {
+    display: block;
+    width: 100%;
+  }
+
+  p {
+    flex: 2;
+    border: 2px solid;
+  }
+</style>
+
+<body>
+  <main>
+    <picture>
+      <source srcset="responsive-diamond@2x.png 2x" />
+      <source srcset="responsive-diamond@3x.png 3x" />
+      <img src="responsive-diamond.png" />
+    </picture>
+    <p>Hello World</p>
+  </main>
+</body>

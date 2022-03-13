@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+* {
+  background: rgb(232, 232, 232);
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  margin: 20px;
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: [r-line-1] 5rem [r-line-2] 1fr [r-line-3] 5rem [r-line-4];
+  gap: 1rem;
+  grid-template-areas:
+    'header header header header'
+    'left main main main'
+    'footer footer footer footer'
+  ;
+  justify-content: center;
+}
+
+.el1 {
+  background-image: linear-gradient(45deg, rgb(20, 222, 124) 0%, rgb(20, 222, 124) 21%, rgb(25, 190, 119) 21%, rgb(25, 190, 119) 37%, rgb(30, 158, 113) 37%, rgb(30, 158, 113) 46%, rgb(35, 126, 108) 46%, rgb(35, 126, 108) 53%, rgb(39, 94, 103) 53%, rgb(39, 94, 103) 59%, rgb(44, 62, 97) 59%, rgb(44, 62, 97) 77%, rgb(49, 30, 92) 77%, rgb(49, 30, 92) 100%);
+  grid-area: header;
+}
+
+.el2 {
+  background-image: radial-gradient(circle at top center, rgb(244, 234, 104), rgb(234, 179, 103), rgb(224, 125, 103), rgb(214, 70, 102), rgb(204, 15, 101));
+  grid-area: left;
+}
+
+.el3 {
+  background-image: radial-gradient(circle at top center, rgb(235, 41, 254), rgb(185, 42, 217), rgb(134, 42, 180), rgb(84, 43, 142), rgb(33, 43, 105));
+  grid-area: main;
+}
+
+.el4 {
+  background-image: linear-gradient(135deg, rgba(154, 154, 154, 0.46) 0%, rgba(154, 154, 154, 0.46) 14.286%, rgba(171, 171, 171, 0.46) 14.286%, rgba(171, 171, 171, 0.46) 28.572%, rgba(187, 187, 187, 0.46) 28.572%, rgba(187, 187, 187, 0.46) 42.858%, rgba(204, 204, 204, 0.46) 42.858%, rgba(204, 204, 204, 0.46) 57.144%, rgba(220, 220, 220, 0.46) 57.144%, rgba(220, 220, 220, 0.46) 71.43%, rgba(237, 237, 237, 0.46) 71.43%, rgba(237, 237, 237, 0.46) 85.716%, rgba(253, 253, 253, 0.46) 85.716%, rgba(253, 253, 253, 0.46) 100.002%),
+  linear-gradient(45deg, rgb(44, 44, 44) 0%, rgb(44, 44, 44) 14.286%, rgb(63, 63, 63) 14.286%, rgb(63, 63, 63) 28.572%, rgb(83, 83, 83) 28.572%, rgb(83, 83, 83) 42.858%, rgb(102, 102, 102) 42.858%, rgb(102, 102, 102) 57.144%, rgb(121, 121, 121) 57.144%, rgb(121, 121, 121) 71.43%, rgb(141, 141, 141) 71.43%, rgb(141, 141, 141) 85.716%, rgb(160, 160, 160) 85.716%, rgb(160, 160, 160) 100.002%);
+  grid-area: footer;
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1);
+  /* height: 100%;
+  width: 100%; */
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1);
+  transform: translateY(-3px) scale(1.1);
+}
