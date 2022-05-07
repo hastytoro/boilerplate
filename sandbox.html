@@ -1,0 +1,19 @@
+<body>
+  <div id="root"></div>
+  <script src="https:/unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script type="text/javascript">
+    const rootElement = document.getElementById("root");
+    const element = React.createElement(
+      "div",
+      {
+        className: "container",
+      },
+      "Hello World",
+      ", Another child",
+      React.createElement("span", null, "Hi, I span!")
+    );
+    ReactDOM.render(element, rootElement);
+    console.log(element);
+  </script>
+</body>
