@@ -5,90 +5,127 @@
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
     // https://github.com/donavon/hook-flow
-
     function Child() {
-      console.log('%c    Child: render start', 'color: MediumSpringGreen')
+      console.log("%c    Child: render - start 🟢", "color: MediumSpringGreen");
 
       const [count, setCount] = React.useState(() => {
-        console.log('%c    Child: useState callback', 'color: tomato')
-        return 0
-      })
-
-      React.useEffect(() => {
-        console.log('%c    Child: useEffect no deps', 'color: LightCoral')
-        return () => {
-          console.log(
-            '%c    Child: useEffect no deps cleanup',
-            'color: LightCoral',
-          )
-        }
-      })
+        console.log(
+          "%c    Child: useState - state 🗄️ [count, setCount]",
+          "color: tomato"
+        );
+        return 0;
+      });
 
       React.useEffect(() => {
         console.log(
-          '%c    Child: useEffect empty deps',
-          'color: MediumTurquoise',
-        )
+          "%c    Child: useEffect(() => , no deps) - setup 🌐 (componentDidMount&componentDidUpdate)",
+          "color: hsl(210, 100%, 80%)"
+        );
         return () => {
           console.log(
-            '%c    Child: useEffect empty deps cleanup',
-            'color: MediumTurquoise',
-          )
-        }
-      }, [])
+            "%c    Child: useEffect(() => , no deps) - cleanup 🧹 (componentWillUnmount/remove)",
+            "color: hsl(210, 100%, 80%)"
+          );
+        };
+      });
 
       React.useEffect(() => {
-        console.log('%c    Child: useEffect with dep', 'color: HotPink')
+        console.log(
+          "%c    Child: useEffect(() => ,[empty deps]) - setup 🌐 (componentDidMount/mount-only)",
+          "color: hsl(210, 100%, 70%)"
+        );
         return () => {
           console.log(
-            '%c    Child: useEffect with dep cleanup',
-            'color: HotPink',
-          )
-        }
-      }, [count])
+            "%c    Child: useEffect(() => ,[empty deps]) - cleanup 🧹 (componentWillUnmount/remove)",
+            "color: hsl(210, 100%, 70%)"
+          );
+        };
+      }, []);
 
-      const element = (
-        <button onClick={() => setCount(previousCount => previousCount + 1)}>
-          {count}
-        </button>
-      )
+      React.useEffect(() => {
+        console.log(
+          "%c    Child: useEffect(() => ,[with dep]) - setup 🌐 (componentDidUpdate/updates)",
+          "color: hsl(210, 100%, 60%)"
+        );
+        return () => {
+          console.log(
+            "%c    Child: useEffect(() => ,[with dep]) cleanup 🧹 (componentWillUnmount/remove)",
+            "color: hsl(210, 100%, 60%)"
+          );
+        };
+      }, [count]);
 
-      console.log('%c    Child: render end', 'color: MediumSpringGreen')
+      const handleClick = () => {
+        console.log(
+          "%c    Child: handleClick - event 🔥",
+          "color: MediumSpringGreen"
+        );
+        setCount((previousCount) => previousCount + 1);
+      };
+      const element = <button onClick={handleClick}>{count}</button>;
 
-      return element
+      console.log("%c    Child: render - end 🔴", "color: MediumSpringGreen");
+
+      return element;
     }
 
     function App() {
-      console.log('%cApp: render start', 'color: MediumSpringGreen')
+      console.log("%cApp: render - start 🟢", "color: MediumSpringGreen");
 
       const [showChild, setShowChild] = React.useState(() => {
-        console.log('%cApp: useState callback', 'color: tomato')
-        return false
-      })
+        console.log(
+          "%cApp: useState - state 🗄️ [showChild, setShowChild]",
+          "color: tomato"
+        );
+        return false;
+      });
 
       React.useEffect(() => {
-        console.log('%cApp: useEffect no deps', 'color: LightCoral')
-        return () => {
-          console.log('%cApp: useEffect no deps cleanup', 'color: LightCoral')
-        }
-      })
-
-      React.useEffect(() => {
-        console.log('%cApp: useEffect empty deps', 'color: MediumTurquoise')
+        console.log(
+          "%cApp: useEffect(() => , no deps) - setup 🌐 (componentDidMount&componentDidUpdate)",
+          "color: hsl(210, 100%, 80%)"
+        );
         return () => {
           console.log(
-            '%cApp: useEffect empty deps cleanup',
-            'color: MediumTurquoise',
-          )
-        }
-      }, [])
+            "%cApp: useEffect(() => , no deps) - cleanup 🧹 (componentWillUnmount/remove)",
+            "color: hsl(210, 100%, 80%)"
+          );
+        };
+      });
 
       React.useEffect(() => {
-        console.log('%cApp: useEffect with dep', 'color: HotPink')
+        console.log(
+          "%cApp: useEffect(() => ,[empty deps]) - setup 🌐 (componentDidMount/mount-only)",
+          "color: hsl(210, 100%, 70%)"
+        );
         return () => {
-          console.log('%cApp: useEffect with dep cleanup', 'color: HotPink')
-        }
-      }, [showChild])
+          console.log(
+            "%cApp: useEffect(() => ,[empty deps]) - cleanup 🧹 (componentWillUnmount/remove)",
+            "color: hsl(210, 100%, 70%)"
+          );
+        };
+      }, []);
+
+      React.useEffect(() => {
+        console.log(
+          "%cApp: useEffect(() => ,[with dep]) - setup 🌐 (componentDidUpdate/updates)",
+          "color: hsl(210, 100%, 60%)"
+        );
+        return () => {
+          console.log(
+            "%cApp: useEffect(() => ,[with dep]) - cleanup 🧹 (componentWillUnmount/remove)",
+            "color: hsl(210, 100%, 60%)"
+          );
+        };
+      }, [showChild]);
+
+      const handleChange = (event) => {
+        console.log(
+          "%cApp: handleChange - event 🔥",
+          "color: MediumSpringGreen"
+        );
+        setShowChild(event.target.checked);
+      };
 
       const element = (
         <>
@@ -96,8 +133,8 @@
             <input
               type="checkbox"
               checked={showChild}
-              onChange={e => setShowChild(e.target.checked)}
-            />{' '}
+              onChange={handleChange}
+            />{" "}
             show child
           </label>
           <div
@@ -106,19 +143,19 @@
               margin: 10,
               height: 30,
               width: 30,
-              border: 'solid',
+              border: "solid",
             }}
           >
             {showChild ? <Child /> : null}
           </div>
         </>
-      )
+      );
 
-      console.log('%cApp: render end', 'color: MediumSpringGreen')
+      console.log("%cApp: render - end 🔴", "color: MediumSpringGreen");
 
-      return element
+      return element;
     }
 
-    ReactDOM.render(<App />, document.getElementById('root'))
+    ReactDOM.render(<App />, document.getElementById("root"));
   </script>
 </body>
