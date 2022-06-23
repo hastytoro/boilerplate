@@ -576,7 +576,7 @@
 
 10. ### styling
 
-Here `className` and `style` props are for styling components. Keep in mind `className` is not class (like it is in HTML) because that would be a keyword in JavaScript. The `style` prop accepts an object of camelCase styles rather than a string of css (like it does in HTML). We’ll take it even further by creating a reusable component that encapsulates these styles and composes the given `className` and `style` prop together.
+    Here `className` and `style` props are for styling components. Keep in mind `className` is not class (like it is in HTML) because that would be a keyword in JavaScript. The `style` prop accepts an object of camelCase styles rather than a string of css (like it does in HTML). We’ll take it even further by creating a reusable component that encapsulates these styles and composes the given `className` and `style` prop together.
 
     ```jsx
     const element = (
@@ -1269,7 +1269,7 @@ Here `className` and `style` props are for styling components. Keep in mind `cla
 
     No matter how hard you try, eventually your `App` code just isn’t going to behave how you expect and you’ll need to handle those exceptions because if render is thrown and unhandled, your application will be removed from the page.
 
-    What what is visible, is only a blank screen. Luckily for us, there’s a simple way to handle errors in your application using a special kind of component called an `ErrorBoundary`. There is currently no way to create the component with a function and you have to use a class component instead, but luckily there’s a terrific open source library called `react-error-boundary`.
+    What is visible, is only a blank screen. Luckily for us, there’s a simple way to handle errors in your application using a special kind of component called an `ErrorBoundary`. There is currently no way to create the component with a function and you have to use a class component instead, but luckily there’s a terrific open source library called `react-error-boundary`.
 
     Let's cover how to write our own error boundary and then use the library instead. Here we simulate an error in our functional component. Click 💣 and notice our entire application goes blank page.
 
